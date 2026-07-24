@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking Prep Guide — Frank Huang's Brainstorming Ideas</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-light: #636e72;
+    --accent: #e17055;
+    --accent2: #6c5ce7;
+    --accent3: #0984e3;
+    --pro: #00b894;
+    --border: #e0e0e0;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* === HERO === */
+  .hero {
+    background: linear-gradient(135deg, #e17055 0%, #d63031 40%, #6c5ce7 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0; right: 0;
+    height: 60px;
+    background: var(--bg);
+    border-radius: 50% 50% 0 0;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .hero .sub { font-size: 1.05rem; opacity: 0.9; margin-bottom: 4px; }
+  .hero .author { font-size: 0.9rem; opacity: 0.75; margin-top: 6px; }
+  .hero .badge {
+    display: inline-block; background: rgba(255,255,255,0.18);
+    padding: 5px 16px; border-radius: 20px; font-size: 0.85rem;
+    margin: 6px 4px; backdrop-filter: blur(6px);
+  }
+
+  /* === STATS BAR === */
+  .stats {
+    max-width: 900px; margin: -20px auto 32px;
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    position: relative; z-index: 2;
+  }
+  .stat-card {
+    background: var(--card-bg); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 18px 22px;
+    text-align: center; min-width: 100px; flex: 1;
+  }
+  .stat-card .num { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+  .stat-card .lbl { font-size: 0.8rem; color: var(--text-light); margin-top: 2px; }
+
+  /* === CONTAINER === */
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* === SECTION HEADER === */
+  .section-title {
+    font-size: 1.5rem; font-weight: 700; margin: 40px 0 16px;
+    padding-left: 14px; border-left: 4px solid var(--accent);
+  }
+  .section-title.p3 { border-left-color: var(--accent2); }
+
+  /* === OVERVIEW GRID === */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px; margin-bottom: 32px;
+  }
+  .overview-item {
+    background: var(--card-bg); border-radius: 10px;
+    box-shadow: var(--shadow); padding: 12px 10px;
+    text-align: center; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+    border: 2px solid transparent; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .overview-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-color: var(--accent); }
+  .overview-item .icon { font-size: 1.6rem; }
+  .overview-item .name { font-size: 0.82rem; font-weight: 600; text-align: center; }
+  .overview-item .count { font-size: 0.7rem; color: var(--text-light); }
+
+  /* === TOPIC CARD === */
+  .topic-card {
+    background: var(--card-bg); border-radius: var(--radius);
+    box-shadow: var(--shadow); margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .topic-header {
+    padding: 18px 24px;
+    background: linear-gradient(135deg, #fff5f3 0%, #ffe8e4 100%);
+    display: flex; align-items: center; gap: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .topic-card.p3 .topic-header {
+    background: linear-gradient(135deg, #f3f0ff 0%, #e8e4ff 100%);
+  }
+  .topic-header .t-icon { font-size: 2rem; }
+  .topic-header .t-num { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+  .topic-header h3 { font-size: 1.2rem; font-weight: 700; flex: 1; }
+
+  .qa-block {
+    border-bottom: 1px solid #f1f3f4;
+    padding: 16px 24px;
+  }
+  .qa-block:last-child { border-bottom: none; }
+  .qa-block .q {
+    font-weight: 700; font-size: 0.95rem; color: #2d3436;
+    margin-bottom: 10px; display: flex; align-items: flex-start; gap: 6px;
+  }
+  .qa-block .q .q-icon { color: var(--accent); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+  .qa-block .answers {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  }
+  .qa-block .answer {
+    background: #f8f9fa; border-radius: 8px; padding: 10px 14px;
+    font-size: 0.84rem; border-left: 3px solid var(--accent);
+    transition: background 0.15s;
+  }
+  .qa-block .answer:hover { background: #fff5f3; }
+  .qa-block .answer .a-num {
+    display: inline-block; background: var(--accent); color: #fff;
+    width: 20px; height: 20px; border-radius: 50%; text-align: center;
+    font-size: 0.7rem; font-weight: 700; line-height: 20px; margin-right: 6px;
+  }
+
+  /* P3 specific */
+  .topic-card.p3 .qa-block .q .q-icon { color: var(--accent2); }
+  .topic-card.p3 .qa-block .answer { border-left-color: var(--accent2); }
+  .topic-card.p3 .qa-block .answer:hover { background: #f3f0ff; }
+  .topic-card.p3 .qa-block .answer .a-num { background: var(--accent2); }
+
+  /* === KEY TIPS === */
+  .tips-box {
+    background: linear-gradient(135deg, #fff9e6, #fff3cc);
+    border-radius: var(--radius); padding: 24px 28px;
+    margin-bottom: 32px; border-left: 4px solid #fdcb6e;
+  }
+  .tips-box h3 { font-size: 1.1rem; margin-bottom: 12px; }
+  .tips-box p { font-size: 0.9rem; color: var(--text-light); }
+
+  /* === BACK TO TOP === */
+  .back-top {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--accent); color: #fff; border: none;
+    font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 14px rgba(225,112,85,0.3);
+    display: none; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .back-top.show { display: flex; }
+
+  /* vocab tag */
+  .vocab-tag {
+    display: inline-block; background: #e8f4fd; color: #0984e3;
+    padding: 1px 8px; border-radius: 10px; font-size: 0.7rem;
+    margin: 2px 2px; font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.4rem; }
+    .qa-block .answers { grid-template-columns: 1fr; }
+    .overview-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    .stats { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<div class="hero">
+  <h1>🎤 IELTS Speaking Prep Guide</h1>
+  <div class="sub">Frank Huang's Super Brainstorming Ideas · 09.14 Exam Prep</div>
+  <div class="author">By 黄瀚生 Frank · 提分营</div>
+  <div style="margin-top:12px">
+    <span class="badge">6 Part 1 Topics</span>
+    <span class="badge">30+ Questions</span>
+    <span class="badge">5 Part 3 Types</span>
+    <span class="badge">10,000+ Words</span>
+  </div>
+</div>
+
+<!-- ====== STATS ====== -->
+<div class="stats">
+  <div class="stat-card"><div class="num">6</div><div class="lbl">Part 1 Core Topics</div></div>
+  <div class="stat-card"><div class="num">30+</div><div class="lbl">Sample Answers</div></div>
+  <div class="stat-card"><div class="num">5</div><div class="lbl">Part 3 Question Types</div></div>
+  <div class="stat-card"><div class="num">50+</div><div class="lbl">Brainstorm Ideas</div></div>
+</div>
+
+<div class="container">
+
+<!-- ====== KEY TIPS ====== -->
+<div class="tips-box">
+  <h3>💡 Frank's Message to Students</h3>
+  <p>Many students struggle to come up with ideas during the speaking test. Before the course begins, let's do some brainstorming to supplement your points. This document contains <strong>over 10,000 words</strong> — please read carefully and respect the author's work. Don't share it without permission!</p>
+</div>
+
+<!-- ====== PART 1 OVERVIEW ====== -->
+<h2 class="section-title">📋 Part 1 — 6 Core Topics Overview</h2>
+<div class="overview-grid" id="p1overview"></div>
+
+<!-- ====== PART 1 DETAILS ====== -->
+<h2 class="section-title" style="margin-top:36px">🗣️ Part 1 — Topic Details & Sample Answers</h2>
+<div id="part1"></div>
+
+<!-- ====== PART 3 OVERVIEW ====== -->
+<h2 class="section-title p3">🧠 Part 3 — 5 Brainstorm Question Types</h2>
+<div class="overview-grid" id="p3overview"></div>
+
+<!-- ====== PART 3 DETAILS ====== -->
+<h2 class="section-title p3" style="margin-top:36px">📝 Part 3 — Question-by-Question Brainstorm Ideas</h2>
+<div id="part3"></div>
+
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ====== PART 1 DATA ======
+const part1Topics = [
+  {
+    id: 'p1-1', icon: '📚', name: 'Studies',
+    questions: [
+      {
+        q: 'Why did you choose to study this?',
+        answers: [
+          'Accounting cultivates my attention to detail, and I\'ve always been interested in this field.',
+          'Chinese is our own language — I felt I must master it, so I chose it decisively in university.',
+          'Mathematics is a great subject that develops logical thinking and reasoning ability.',
+          'I chose this major hoping to improve our country\'s environment through our efforts.',
+          'History lets you learn so much — countless lessons and experiences from the past.'
+        ]
+      },
+      {
+        q: 'Is there anything about your subject you don\'t like?',
+        answers: [
+          'I really dislike having to calculate and make charts every day. Good training, but tedious daily.',
+          'Constantly learning new things is tiring — Chinese is just too profound.',
+          'With math... what can I complain about? Math is math after all.',
+          'Sometimes working with toxic substances isn\'t great — harmful to my health.',
+          'Too many dates to memorize — sometimes I just can\'t remember them all.'
+        ]
+      },
+      {
+        q: 'Do many people in China choose to study this subject?',
+        answers: [
+          'Yes, many choose accounting — finance majors are always the hottest in China.',
+          'I\'m not sure, but at our school not many. People think Chinese don\'t need to study Chinese!',
+          'Not many — math is just too hard. In high school most students find it the toughest subject.',
+          'Actually not many — this major is tough, and parents don\'t want their kids to suffer in university.',
+          'Many do — history is always worth studying. But it\'s mainly girls who choose it, haha.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p1-2', icon: '💼', name: 'Work',
+    questions: [
+      {
+        q: 'What work do you do?',
+        answers: [
+          'I\'m a teacher at XX school, been working for 3 years.',
+          'I work as an accountant at XX company, been doing it for 3 years.',
+          'I just graduated and am job hunting — looking for something related to my major, maybe a civil servant.',
+          'I work at a foreign company as a staff member, been there 3 years.',
+          'I\'ve just started my own business — self-employed.'
+        ]
+      },
+      {
+        q: 'Why did you choose that kind of work?',
+        answers: [
+          'Teaching has always been my dream job — I can pass on what I know and let students enjoy learning.',
+          'I studied accounting as an undergrad, so I wanted a related job. Plus I enjoy working with numbers and spreadsheets.',
+          'It\'s a very stable job — I can do things I enjoy in my spare time and take care of my parents anytime.',
+          'Foreign companies give me the most room for creativity. The pressure keeps me passionate.',
+          'Earning money on my own has always been what I want — every day is fulfilling and I\'m always learning.'
+        ]
+      },
+      {
+        q: 'Is there anything you don\'t like about your job?',
+        answers: [
+          'Some students are really naughty and disobedient — I really dislike that.',
+          'Staring at a computer screen all day is taking a toll on my health.',
+          'Constantly networking and dealing with people — in China you need lots of connections (guanxi), which I dislike.',
+          'Everyone works too hard — I feel like I\'m struggling to keep up.',
+          'Not really — it\'s my own company, so everything is exactly how I like it.'
+        ]
+      },
+      {
+        q: 'Is your job a popular choice in China?',
+        answers: [
+          'Very popular — teaching is stable with high social status.',
+          'So-so — the work pressure is high, but many still choose it because you learn a lot.',
+          'Very popular — for its stability, social status, and pretty good income.',
+          'Foreign companies are always popular — higher salaries and skilled work.',
+          'Very popular — everyone wants their own company, but many give up because it\'s really hard.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p1-3', icon: '🏠', name: 'Hometown',
+    questions: [
+      {
+        q: 'Where are you from?',
+        answers: [
+          'I\'m from Shanghai — a great city. As you know, lots of people, and the economy is one of the best in China.',
+          'I\'m from Beijing — the capital, with so many good schools. Air quality isn\'t great, but otherwise it\'s amazing.',
+          'I\'m from Chengdu in Sichuan — a city that values quality of life. We have lots of entertainment and everyone is happy.',
+          'I\'m from Guangzhou in Guangdong — a very open city, second largest population in China. We\'re close to Hong Kong and visit often.'
+        ]
+      },
+      {
+        q: 'What do you like about your hometown?',
+        answers: [
+          'In Shanghai, tourists come every year, but we locals don\'t go to tourist spots. I love sitting in a park on an afternoon watching people come and go — the best quality of life.',
+          'In Beijing, my favorite thing is the Siheyuan (courtyard houses). A tradition where several families live in one courtyard — feels very warm and cozy.',
+          'In Chengdu, it\'s definitely the food! We have so many delicious things — perfect for a food lover like me.',
+          'In Guangzhou, I love walking alone along different roads, slowly savoring the city\'s beauty. Every time I discover something new.'
+        ]
+      },
+      {
+        q: 'How has your hometown changed in recent years?',
+        answers: [
+          'Shanghai has changed enormously. In the past, transportation was underdeveloped and fewer people. With opening up, it attracted more workers. Now: lots of people, high living costs, but great infrastructure.',
+          'Beijing as the capital has changed a lot in 20 years. Before: short buildings and dirty streets. Now the government has improved the city\'s image — a great city with the best resources.',
+          'Chengdu\'s quality of life hasn\'t changed much in 20 years — we already had high quality of life! But both quality and cost of living have gradually risen. I love living here.',
+          'Guangzhou has changed dramatically. 20 years ago it was a small city with few people. With modernization, it\'s become a paradise for migrants. So many outsiders have given the city new vitality.'
+        ]
+      },
+      {
+        q: 'Do you still live there?',
+        answers: [
+          'I\'ll continue living in Shanghai. Though living costs and housing are expensive, it\'s where I grew up after all.',
+          'I probably won\'t stay — the air quality is too poor and living costs too high. I might move to a city with better quality of life like Chengdu.',
+          'I\'ll definitely stay — I love it here too much. My favorite people and lifestyle are here.',
+          'I think so, but not certain. I want to explore the world, but my parents are here — that\'s something I must consider.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p1-4', icon: '🛏️', name: 'Accommodation',
+    questions: [
+      {
+        q: 'What kind of housing do you live in?',
+        answers: [
+          'I live in a house — one our family built ourselves. It\'s very beautiful.',
+          'I live in an apartment — in big cities, apartments are the most affordable.',
+          'I\'m still a student, so I live in a dormitory with three other roommates. We get along great.'
+        ]
+      },
+      {
+        q: 'Which is your favorite room?',
+        answers: [
+          'My favorite is my own room — I designed it myself. The colors and layout are all based on my ideas. I love enjoying my personal time there.',
+          'My favorite is the living room — it\'s big, with a large table everyone can sit around. That\'s what home feels like.'
+        ]
+      },
+      {
+        q: 'Which room does your family spend most time in?',
+        answers: [
+          'In my home, it\'s my parents\' bedroom. I love lying on mom\'s bed chatting with them — about my future, studies, everything.',
+          'It\'s definitely the living room. Every day we eat together there, sharing what we\'ve gained and new experiences. It feels great.'
+        ]
+      },
+      {
+        q: 'In the future, what kind of place would you like to live in?',
+        answers: [
+          'Honestly, I\'ll stay in my current home — it\'s my ideal house, with the people I care about most inside.',
+          'I want to live in a house I design myself — my mood would be amazing since everything is arranged by me. I\'d decorate it like my best friend.'
+        ]
+      }
+    ]
+  }
+];
+
+// ====== PART 3 DATA ======
+const part3Topics = [
+  {
+    id: 'p3-1', icon: '🌍', name: 'Social Issues',
+    questions: [
+      {
+        q: 'How is society affected by the vehicles that are used?',
+        answers: [
+          'Cars make travel convenient but cause serious air pollution and global warming.',
+          'Too many cars cause traffic jams and noise pollution.',
+          'Excessive car use leads to resource shortages, e.g. gasoline.',
+          'Over-reliance on cars makes people lazier, potentially leading to obesity and health problems.',
+          'Cars accelerate the pace of life and increase stress levels.'
+        ]
+      },
+      {
+        q: 'What impact does tourism have on the inhabitants and local region of tourist attractions?',
+        answers: [
+          'Tourism boosts the local economy and increases employment rate.',
+          'Tourism promotes local culture and expands tourists\' horizons.',
+          'Tourism may damage the environment — tourists\' bad behavior like littering or vandalism.',
+          'Local culture may be damaged — e.g. in Australia, many aboriginal settlements were developed into tourist attractions.',
+          'Tourism can lead to cultural shock between visitors and locals.'
+        ]
+      },
+      {
+        q: 'Should government spend money promoting art in society?',
+        answers: [
+          'Art is a necessary part of people\'s life — it enhances the joy of living.',
+          'Art fires people\'s imagination and develops artistic talents.',
+          'Art lets people see problems from different perspectives.',
+          'Art reflects cultural identity, such as aboriginal culture.'
+        ]
+      },
+      {
+        q: 'How will longer life expectancy affect society as a whole?',
+        answers: [
+          'Longer life expectancy creates an aging society, which is detrimental to social development.',
+          'Young people face more pressure supporting elderly parents — under the one-child policy, one couple may support 4 elders.',
+          'Governments need to pay more pensions — greater financial pressure.',
+          'In poor rural areas, young people migrate for work leaving elderly behind — bad for their mental health.',
+          'Too many elderly people puts increased pressure on the healthcare system.'
+        ]
+      },
+      {
+        q: 'Should TV producers reflect traditional culture and values?',
+        answers: [
+          'Traditional culture helps people gain a deep understanding of the past.',
+          'TV producers should help young people establish correct values and avoid going astray.',
+          'Traditional culture has much essence worth learning from.',
+          'The main purpose of TV is entertainment — producers have no responsibility to spread traditional culture.'
+        ]
+      },
+      {
+        q: 'Should everyone pay for roads through taxes, or only drivers?',
+        answers: [
+          'Everyone should pay taxes for infrastructure — society needs roads to function, e.g. transporting materials for construction.',
+          'Everyone should pay — charging only road users is a cumbersome process requiring massive manpower and resources.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p3-2', icon: '⚖️', name: 'Comparisons',
+    questions: [
+      {
+        q: 'Compare how old and young people spend their leisure time.',
+        answers: [
+          'Elderly: play cards, Tai Chi, or square dancing. Young: hang out with friends or go to KTV.',
+          'Elderly: catch up with friends chatting. Young: go clubbing with friends.',
+          'Elderly: read newspapers. Young: surf the Internet and play games.',
+          'Elderly: more quiet time, slower pace, sitting or reading. Young: busier, faster pace, working to support family.'
+        ]
+      },
+      {
+        q: 'Compare transportation today with the past (20-50 years ago).',
+        answers: [
+          'Past: mainly bicycles. Today: buses and private cars.',
+          'Past: long-distance travel by regular train taking ages. Today: bullet trains or planes — just a few hours to the destination.',
+          'Past: wooden boats, slow. Today: yachts and cruise ships — faster and more comfortable.',
+          'Past: subways only in a few developed cities. Today: subways in most developed cities nationwide.'
+        ]
+      },
+      {
+        q: 'Compare old houses and modern houses.',
+        answers: [
+          'Old houses: dangerous, may collapse in earthquakes. Modern houses: safer, withstand earthquakes.',
+          'Old houses: low-rise, convenient access. Modern: high-rise due to land shortage — elevator breakdowns cause major trouble.',
+          'Old houses: unitary traditional style. Modern: more Westernized with diverse architectural styles.',
+          'Old houses: usually brick. Modern: concrete structures.'
+        ]
+      },
+      {
+        q: 'Compare newspapers and novels.',
+        answers: [
+          'Newspapers: report real domestic and international events. Novels: usually made up by the author.',
+          'Newspapers: diverse content — culture, economy, life. Novels: single focus, usually a plot.',
+          'Newspapers: often have advertisements. Novels: generally no ads.',
+          'Newspapers: relatively short content. Novels: relatively long content.'
+        ]
+      },
+      {
+        q: 'Compare big shops (supermarkets/department stores) with small shops.',
+        answers: [
+          'Big supermarkets: more product choices. Small convenience stores: fewer choices.',
+          'Big supermarkets: more expensive. Small shops: cheaper.',
+          'Big supermarkets: quality is more guaranteed. Small shops: no quality assurance.',
+          'Big supermarkets: usually in city centers, far for many. Small shops: widely distributed, seen everywhere.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p3-3', icon: '🔄', name: 'Changes',
+    questions: [
+      {
+        q: 'How have leisure activities changed in China in recent years?',
+        answers: [
+          'Past children: hide and seek, playing in sand. Today\'s children: video games.',
+          'Past young people: play cards or chess. Today: clubbing or KTV.',
+          'Past elderly: visit neighbors and chat. Today: jogging or square dancing.',
+          'Past: leisure activities were monotonous. Today: diversified.'
+        ]
+      },
+      {
+        q: 'How have recent changes in communication technology changed communication?',
+        answers: [
+          'Telecommunication changed how people communicate — no need for face-to-face meetings, saving lots of time.',
+          'Distance education lets students in underdeveloped areas access rich teaching resources.',
+          'Network communication lets people do business online with people worldwide.',
+          'Telecommunication enables doctors far away to guide treatment of incurable diseases.'
+        ]
+      },
+      {
+        q: 'How have buildings changed in recent years?',
+        answers: [
+          'Past: low-rise, only 1-2 floors. Today: high-rise buildings and skyscrapers, especially in big cities.',
+          'Past: many wooden structures. Today: brick and tile.',
+          'Past: single-function buildings. Today: multi-function — swimming pools, gyms, etc.',
+          'Past: shabby buildings. Today: modernized.'
+        ]
+      },
+      {
+        q: 'Has the Internet changed people\'s reading habits?',
+        answers: [
+          'Past: read news in newspapers. Today: read news on phones or computers.',
+          'Past: learned from books. Today: more online learning.',
+          'Past: read in classrooms or at home. Today: read on phones on buses or subways.',
+          'The Internet makes people rely more on e-books — more convenient and cheaper.'
+        ]
+      },
+      {
+        q: 'Are people nowadays more or less willing to help others than before?',
+        answers: [
+          'Less willing — helping others can get you into trouble. News reported someone who helped an elderly person up got extorted for money.',
+          'Less willing — people are more materialistic, ignoring spiritual matters. More indifferent to society.',
+          'Less willing — people are more selfish, only caring about their own interests.',
+          'More willing — with education spreading, people\'s quality has improved, so they\'re more willing to help.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p3-4', icon: '👍👎', name: 'Pros & Cons',
+    questions: [
+      {
+        q: 'Advantages and disadvantages of emails vs handwritten letters?',
+        answers: [
+          'Emails are more convenient — send from phone or laptop anywhere.',
+          'Emails save time — deliver messages almost instantly.',
+          'Emails receive lots of junk mail and ads daily — a nuisance.',
+          'Emails can be kept permanently without fear of loss; handwritten letters may get lost.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of advanced technology?',
+        answers: [
+          'Better experience — e.g. iWatch is not just a watch, it monitors health. But these products are very expensive.',
+          'More convenient — online shopping lets you buy from home. But it makes some people lazier.',
+          'Helps handle dangerous situations — robots disarm bombs, reducing casualties. But invention requires massive investment.',
+          'Solves employment — people can do business online. But there\'s false information and fraud, causing losses.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of different transport types?',
+        answers: [
+          'Bicycle: exercises the body, environmental-friendly. But slow, not suitable for long-distance trips.',
+          'Bus: very cheap. But too crowded and squishy.',
+          'Car: fast and comfortable. But emits lots of exhaust fumes, harmful to the environment.',
+          'Boat: enjoy beautiful sea views. But very slow.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of living in city center vs suburbs?',
+        answers: [
+          'City center: shopping is convenient. Suburbs: shopping is troublesome.',
+          'City center: transportation is convenient. Suburbs: transportation less convenient.',
+          'City center: affected by air pollution, bad for health. Suburbs: air is fresher and cleaner.',
+          'City center: relatively more dangerous, higher crime rate. Suburbs: relatively safer.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of using the Internet to search for information?',
+        answers: [
+          'Provides useful learning resources for students. But also violence and pornography that may lead students astray.',
+          'Check flight info, book tickets, shop. But also lots of fraud — some may be deceived.',
+          'Read news, understand domestic and global events. But bad news can cause panic, e.g. terrorist attacks.',
+          'Find suitable jobs. But the information may be fake.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of children going on holiday camps?',
+        answers: [
+          'Learn useful survival skills. But potential dangers like drowning.',
+          'Strengthen bonds — students help each other, developing teamwork. But conflicts may arise.',
+          'Expand students\' horizons. But many difficulties, e.g. no toilets.',
+          'Get a better picture of nature. But expensive — poor families may not afford the equipment.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of being a public figure?',
+        answers: [
+          'Become famous. But private life is disturbed by paparazzi.',
+          'Become a role model. But must watch every action — youth imitate celebrities.',
+          'Earn lots of money. But the work is extremely hard.',
+          'Enjoy good material life. But endure pressure from public opinion.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of working with others?',
+        answers: [
+          'Reduces workload. But some members may slack off, reducing team motivation.',
+          'Share ideas, improve efficiency. But members may leak trade secrets.',
+          'Develop teamwork ability. But disagreements may damage relationships.',
+          'Learn from each other\'s strengths. But some are selfish and unwilling to share ideas.'
+        ]
+      },
+      {
+        q: 'Advantages and disadvantages of owning your own business?',
+        answers: [
+          'Be your own boss, no constraints. But without supervision, may become lazy.',
+          'Flexible working hours. But may need to stay up late frequently.',
+          'Earn more money. But bear all risks alone, may even go bankrupt.',
+          'Meet different clients, expand network. But requires large upfront investment — many struggle to raise funds.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p3-5', icon: '🤔', name: 'Explaining Reasons',
+    questions: [
+      {
+        q: 'Why do people still buy very expensive paintings?',
+        answers: [
+          'Some paintings have high collectible value and can make a lot of money.',
+          'Some people love art — a painting itself is a form of art.',
+          'Collecting improves material life while also elevating spiritual life.',
+          'Collectibles are not just wealth — they\'re symbols of taste, cultivation, and status.'
+        ]
+      },
+      {
+        q: 'Why do some people like shopping and others not?',
+        answers: [
+          'Women generally enjoy shopping more; men usually hate it — they find it tiring.',
+          'Some see shopping as a way to kill time; others think it\'s a waste of time.',
+          'Some use shopping to loosen up and relieve stress; others think it wastes money without reducing stress.'
+        ]
+      },
+      {
+        q: 'Why do elderly people sometimes feel lonely?',
+        answers: [
+          'Family members spend too little time with them.',
+          'When their spouse passes away and children are working away from home — left alone.',
+          'Elderly people are like children — they need more care and attention than we think.',
+          'As physical functions weaken, they feel increasingly useless.'
+        ]
+      },
+      {
+        q: 'Why are many older people reluctant to learn computer skills?',
+        answers: [
+          'They\'re less technologically driven — less capable of accepting new things, unwilling to try.',
+          'Many elderly think learning computers is troublesome — no need to learn new skills at their age.',
+          'Their elderly friends don\'t use computers — they feel there\'s no point learning.',
+          'Elderly people have poor eyesight — computer screens aren\'t clear to them.'
+        ]
+      }
+    ]
+  }
+];
+
+// ====== RENDER PART 1 ======
+const p1OverviewEl = document.getElementById('p1overview');
+const part1El = document.getElementById('part1');
+
+part1Topics.forEach(t => {
+  // Overview item
+  const a = document.createElement('a');
+  a.href = '#' + t.id;
+  a.className = 'overview-item';
+  a.innerHTML = `<span class="icon">${t.icon}</span><span class="name">${t.name}</span><span class="count">${t.questions.length} questions</span>`;
+  p1OverviewEl.appendChild(a);
+
+  // Topic card
+  const card = document.createElement('div');
+  card.className = 'topic-card';
+  card.id = t.id;
+  card.innerHTML = `<div class="topic-header">
+    <span class="t-icon">${t.icon}</span>
+    <h3>${t.name}</h3>
+  </div>`;
+
+  t.questions.forEach(qa => {
+    const div = document.createElement('div');
+    div.className = 'qa-block';
+    let html = `<div class="q"><span class="q-icon">❓</span>${qa.q}</div><div class="answers">`;
+    qa.answers.forEach((ans, i) => {
+      html += `<div class="answer"><span class="a-num">${i+1}</span>${ans}</div>`;
+    });
+    html += '</div>';
+    div.innerHTML = html;
+    card.appendChild(div);
+  });
+
+  part1El.appendChild(card);
+});
+
+// ====== RENDER PART 3 ======
+const p3OverviewEl = document.getElementById('p3overview');
+const part3El = document.getElementById('part3');
+
+part3Topics.forEach(t => {
+  // Overview item
+  const a = document.createElement('a');
+  a.href = '#' + t.id;
+  a.className = 'overview-item';
+  a.innerHTML = `<span class="icon">${t.icon}</span><span class="name">${t.name}</span><span class="count">${t.questions.length} questions</span>`;
+  p3OverviewEl.appendChild(a);
+
+  // Topic card
+  const card = document.createElement('div');
+  card.className = 'topic-card p3';
+  card.id = t.id;
+  card.innerHTML = `<div class="topic-header">
+    <span class="t-icon">${t.icon}</span>
+    <h3>${t.name}</h3>
+  </div>`;
+
+  t.questions.forEach(qa => {
+    const div = document.createElement('div');
+    div.className = 'qa-block';
+    let html = `<div class="q"><span class="q-icon">💡</span>${qa.q}</div><div class="answers">`;
+    qa.answers.forEach((ans, i) => {
+      html += `<div class="answer"><span class="a-num">${i+1}</span>${ans}</div>`;
+    });
+    html += '</div>';
+    div.innerHTML = html;
+    card.appendChild(div);
+  });
+
+  part3El.appendChild(card);
+});
+
+// Back to top
+window.addEventListener('scroll', () => {
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 600);
+});
+</script>
+
+</body>
+</html>
