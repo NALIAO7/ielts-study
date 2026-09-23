@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IELTS Study · 娜娜的雅思学习库</title>
+<meta name="description" content="雅思备考资料合集：写作范文、口语素材、经典英文背诵册。">
+<style>
+:root{
+  --bg:#FBFAF7; --surface:#FFF; --surface2:#F4F2ED;
+  --text:#1E1D1A; --text2:#6B6862; --text3:#9C988F;
+  --border:rgba(30,29,26,.10); --border2:rgba(30,29,26,.18);
+  --shadow:0 1px 2px rgba(30,29,26,.04),0 10px 30px -14px rgba(30,29,26,.16);
+  --serif:"Iowan Old Style","Palatino Linotype",Georgia,"Songti SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#171614; --surface:#211F1D; --surface2:#2A2724;
+  --text:#F2F0EC; --text2:#A8A49C; --text3:#7A766F;
+  --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;min-height:100vh}
+
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:.5px solid var(--border)}
+.bar-in{max-width:1000px;margin:0 auto;padding:11px 22px;display:flex;align-items:center}
+.brand{font-family:var(--serif);font-size:15.5px;font-weight:600;letter-spacing:.01em}
+.brand i{font-style:normal;color:#1D9E75}
+.bar-in button{margin-left:auto;border:.5px solid var(--border2);background:var(--surface);color:var(--text2);
+  border-radius:999px;padding:6px 14px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.bar-in button:hover{color:var(--text)}
+
+main{flex:1;max-width:1000px;margin:0 auto;padding:0 22px;width:100%}
+.hero{padding:66px 0 44px;max-width:640px}
+.hero .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin:0 0 20px}
+.hero h1{font-family:var(--serif);font-size:clamp(32px,6vw,50px);line-height:1.14;font-weight:600;
+  letter-spacing:-.015em;margin:0 0 16px}
+.hero h1 i{font-style:normal;color:#1D9E75}
+.hero p{color:var(--text2);font-size:16px;margin:0;max-width:52ch}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:14px;padding-bottom:70px}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--surface);
+  border:.5px solid var(--border);border-radius:16px;padding:24px 24px 22px;
+  transition:border-color .18s,transform .18s,box-shadow .18s;position:relative;overflow:hidden}
+a.card::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--ac)}
+a.card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .tag{display:inline-block;font-size:11.5px;color:var(--ink);background:var(--fill);
+  padding:3px 10px;border-radius:999px;margin-bottom:14px}
+.card h2{font-family:var(--serif);font-size:20px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+.card p{font-size:13.5px;color:var(--text2);margin:0 0 16px;line-height:1.6}
+.card .stat{font-size:12px;color:var(--text3);display:flex;gap:8px;align-items:center;
+  padding-top:14px;border-top:.5px solid var(--border)}
+.card .stat b{font-weight:600;color:var(--text2)}
+
+footer{max-width:1000px;margin:0 auto;padding:0 22px 56px;color:var(--text3);font-size:12.5px;width:100%}
+footer a{color:var(--text2)}
+
+@media(max-width:600px){
+  .hero{padding:44px 0 32px}
+  main,footer{padding-left:16px;padding-right:16px}
+  .bar-in{padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="brand">IELTS <i>Study</i></div>
+    <button id="theme">夜间</button>
+  </div>
+</div>
+
+<main>
+  <div class="hero">
+    <p class="kicker">Nana's IELTS Library</p>
+    <h1>把雅思备考，<br>整理成<i>能反复用</i>的资料。</h1>
+    <p>写作范文、口语素材、经典英文背诵册。全部做成网页版，电脑和手机打开都能直接看。</p>
+  </div>
+
+  <div class="cards">
+
+    <a class="card" href="classic-23/" style="--ac:#1D9E75;--fill:#E1F5EE;--ink:#04342C">
+      <span class="tag">背诵</span>
+      <h2>23 篇经典英文</h2>
+      <p>乔布斯、丘吉尔、巴菲特的经典演讲片段，中英逐句对照，配主题插画。</p>
+      <div class="stat"><span><b>23</b> 篇</span>·<span><b>229</b> 句</span>·<span>挖空自测 / 朗读</span></div>
+    </a>
+
+    <a class="card" href="writing/" style="--ac:#7F77DD;--fill:#EEEDFE;--ink:#26215C">
+      <span class="tag">写作</span>
+      <h2>大作文范文合集</h2>
+      <p>按题型整理的 Task 2 范文，含思路拆解与高分表达。</p>
+      <div class="stat"><span>范文</span>·<span>思路</span>·<span>可打印</span></div>
+    </a>
+
+    <a class="card" href="speaking/" style="--ac:#BA7517;--fill:#FAEEDA;--ink:#412402">
+      <span class="tag">口语</span>
+      <h2>口语素材库</h2>
+      <p>Part 2 话题卡与高分回答思路，按话题分类方便临考速查。</p>
+      <div class="stat"><span>话题卡</span>·<span>回答思路</span></div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  个人雅思学习资料 · 托管于 <a href="https://github.com/NALIAO7/ielts-study" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+const btn = document.getElementById('theme');
+btn.addEventListener('click', function(){
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  btn.textContent = next === 'dark' ? '日间' : '夜间';
+  try { localStorage.setItem('kl-theme', next); } catch(e){}
+});
+try {
+  const saved = localStorage.getItem('kl-theme');
+  if (saved) {
+    document.documentElement.dataset.theme = saved;
+    btn.textContent = saved === 'dark' ? '日间' : '夜间';
+  }
+} catch(e){}
+</script>
+</body>
+</html>

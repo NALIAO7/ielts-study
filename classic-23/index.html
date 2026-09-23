@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>23 篇经典英文 · 中英对照背诵册</title>
+<style>
+:root{
+  --bg:#FBFAF7; --surface:#FFFFFF; --surface2:#F4F2ED;
+  --text:#1E1D1A; --text2:#6B6862; --text3:#9C988F;
+  --border:rgba(30,29,26,.10); --border2:rgba(30,29,26,.18);
+  --shadow:0 1px 2px rgba(30,29,26,.04),0 8px 24px -12px rgba(30,29,26,.10);
+  --radius:14px;
+  --serif:"Iowan Old Style","Palatino Linotype",Georgia,"Songti SC","Source Han Serif SC",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#171614; --surface:#211F1D; --surface2:#2A2724;
+  --text:#F2F0EC; --text2:#A8A49C; --text3:#7A766F;
+  --border:rgba(255,255,255,.10); --border2:rgba(255,255,255,.18);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+.progress{position:sticky;top:0;height:3px;z-index:60;background:transparent}
+.progress i{display:block;height:100%;width:0;background:#1D9E75;transition:width .1s linear}
+
+.topbar{position:sticky;top:3px;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:.5px solid var(--border)}
+.topbar-in{max-width:1120px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px}
+.brand{font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
+.brand span{color:var(--text3);font-family:var(--sans);font-size:12px;font-weight:400;margin-left:8px}
+.topbar-actions{margin-left:auto;display:flex;gap:6px;align-items:center}
+.ibtn{border:.5px solid var(--border2);background:var(--surface);color:var(--text2);
+  border-radius:999px;padding:6px 13px;font-size:12.5px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.ibtn:hover{color:var(--text);border-color:var(--text3)}
+.ibtn.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+
+.hero{max-width:1120px;margin:0 auto;padding:56px 20px 34px}
+.hero-label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text3);margin:0 0 18px}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,54px);line-height:1.12;font-weight:600;
+  margin:0 0 14px;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:#1D9E75}
+.hero-sub{color:var(--text2);font-size:15.5px;max-width:56ch;margin:0}
+.hero-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px;margin-top:34px;max-width:660px}
+.metric{background:var(--surface2);border-radius:12px;padding:14px 16px}
+.metric b{display:block;font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.metric span{font-size:12px;color:var(--text2)}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 100px}
+
+.secthead{display:flex;align-items:baseline;gap:14px;margin:44px 0 18px}
+.secthead h2{font-size:15px;font-weight:600;margin:0;letter-spacing:.02em}
+.secthead .rule{flex:1;height:.5px;background:var(--border);transform:translateY(-4px)}
+.secthead .hint{font-size:12px;color:var(--text3)}
+
+.searchrow{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.searchrow input{flex:1;min-width:200px;background:var(--surface);border:.5px solid var(--border2);
+  border-radius:11px;padding:11px 15px;font-size:14px;font-family:inherit;color:var(--text)}
+.searchrow input::placeholder{color:var(--text3)}
+.searchrow input:focus{outline:none;border-color:var(--text3)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px}
+.card{position:relative;display:block;text-align:left;width:100%;font-family:inherit;
+  background:var(--surface);border:.5px solid var(--border);border-radius:var(--radius);
+  padding:17px 17px 15px;cursor:pointer;transition:border-color .18s,transform .18s,box-shadow .18s;
+  border-left:3px solid var(--s)}
+.card:hover{border-color:var(--border2);border-left-color:var(--s);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card-no{position:absolute;top:15px;right:15px;font-family:var(--serif);font-size:13px;color:var(--text3);
+  font-variant-numeric:tabular-nums}
+.card-title-en{display:block;font-family:var(--serif);font-size:15px;font-weight:600;line-height:1.35;
+  margin:0 34px 7px 0;color:var(--text)}
+.card-title-cn{display:block;font-size:12.5px;color:var(--text2);line-height:1.45;margin-bottom:11px;min-height:2.9em}
+.card-meta{display:inline-block;font-size:11.5px;color:var(--ink);background:var(--f);
+  padding:2.5px 9px;border-radius:999px}
+
+/* ---------- section ---------- */
+.sec{background:var(--surface);border:.5px solid var(--border);border-radius:18px;
+  margin:26px 0;overflow:hidden;scroll-margin-top:78px}
+.sec-head{position:relative;background:linear-gradient(180deg,var(--f),transparent);padding:26px 26px 0}
+.sec-art{max-width:420px;margin:0 auto}
+.sec-art svg{display:block}
+.sec-titles{padding:8px 0 22px;text-align:center}
+.sec-no{font-size:11.5px;letter-spacing:.14em;color:var(--d);font-weight:600;font-variant-numeric:tabular-nums}
+.sec-en{font-family:var(--serif);font-size:clamp(21px,3.4vw,28px);font-weight:600;line-height:1.22;
+  margin:9px 0 6px;letter-spacing:-.01em;color:var(--text)}
+.sec-cn{font-size:14.5px;color:var(--text2);margin:0}
+.sec-cn:empty{display:none}
+.sec-stats{margin-top:11px;font-size:12px;color:var(--text3);display:flex;gap:9px;justify-content:center;align-items:center}
+.sec-stats .dot{width:3px;height:3px;border-radius:50%;background:currentColor;opacity:.5}
+
+.toolbar{display:flex;gap:7px;flex-wrap:wrap;padding:0 26px 18px;justify-content:center}
+.tbtn{background:var(--surface2);border:.5px solid transparent;color:var(--text2);border-radius:999px;
+  padding:6px 14px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.tbtn:hover{color:var(--text)}
+.tbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+html[data-theme="dark"] .tbtn.on{color:#171614}
+
+.lines{list-style:none;margin:0;padding:4px 26px 30px}
+.line{display:flex;gap:15px;padding:13px 0;border-top:.5px solid var(--border)}
+.line:first-child{border-top:none}
+.line-no{flex:0 0 26px;font-size:11.5px;color:var(--text3);font-variant-numeric:tabular-nums;
+  padding-top:4px;font-family:var(--serif)}
+.line-body{flex:1;min-width:0}
+.line .en{font-family:var(--serif);font-size:17px;line-height:1.55;margin:0;color:var(--text);
+  letter-spacing:.002em}
+.line .cn{font-size:13.5px;line-height:1.6;margin:5px 0 0;color:var(--text2)}
+.line .cn:empty{display:none}
+.sec.hide-cn .cn{display:none}
+.sec.hide-en .en{display:none}
+.sec.blank .en .bl{background:var(--m);color:transparent;border-radius:3px;transition:color .15s,background .15s;cursor:pointer}
+.sec.blank .en .bl.shown{background:transparent;color:inherit}
+.line.speaking{background:var(--surface2);border-radius:10px;padding-left:12px;padding-right:12px}
+.line.speaking .en{color:var(--d);font-weight:600}
+
+.backtop{position:sticky;bottom:22px;float:right;margin-right:2px;z-index:40}
+.backtop button{width:42px;height:42px;border-radius:50%;border:.5px solid var(--border2);
+  background:var(--surface);color:var(--text2);cursor:pointer;box-shadow:var(--shadow);font-size:16px}
+.backtop button:hover{color:var(--text)}
+
+.foot{max-width:1120px;margin:0 auto;padding:0 20px 70px;color:var(--text3);font-size:12.5px;text-align:center}
+
+@media(max-width:640px){
+  .hero{padding:36px 16px 26px}
+  .wrap{padding:0 12px 80px}
+  .sec-head{padding:20px 16px 0}
+  .toolbar{padding:0 16px 16px}
+  .lines{padding:2px 16px 24px}
+  .line{gap:10px}
+  .line-no{flex:0 0 20px}
+  .line .en{font-size:16px}
+  .topbar-in{padding:9px 14px}
+  .brand span{display:none}
+}
+@media print{
+  .topbar,.toolbar,.backtop,.progress,.searchrow{display:none}
+  .sec{break-inside:avoid-page;border:none}
+  .card{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="progress"><i id="bar"></i></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">23 篇经典英文<span>核聚英语 · 中英对照</span></div>
+    <div class="topbar-actions">
+      <button class="ibtn" id="btnCn">中文</button>
+      <button class="ibtn" id="btnBlank">挖空</button>
+      <button class="ibtn" id="btnTheme">夜间</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">Recitation Book</p>
+  <h1>背下这 <em>23 篇</em>，<br>把好句子变成自己的。</h1>
+  <p class="hero-sub">乔布斯、马云、丘吉尔、巴菲特、《当幸福来敲门》……每一篇都是可以脱口而出的英文范本。中英逐句对照，可挖空自测、可朗读跟读。</p>
+  <div class="hero-metrics">
+    <div class="metric"><b>23</b><span>篇文章</span></div>
+    <div class="metric"><b id="mSent">—</b><span>对照句子</span></div>
+    <div class="metric"><b id="mWord">—</b><span>英文词数</span></div>
+    <div class="metric"><b>23</b><span>幅主题插画</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="secthead">
+    <h2>目录</h2><span class="rule"></span><span class="hint">点击卡片跳转</span>
+  </div>
+  <div class="searchrow">
+    <input id="q" type="search" placeholder="搜索英文或中文关键词，例如 grit、梦想、training…" autocomplete="off">
+  </div>
+  <div class="grid" id="grid">
+<button class="card" data-id="1" data-accent="teal" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <span class="card-no">01</span>
+  <span class="card-title-en">Reach the goals</span>
+  <span class="card-title-cn">必须达成目标</span>
+  <span class="card-meta">5 句 · 65 词</span>
+</button>
+<button class="card" data-id="2" data-accent="amber" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <span class="card-no">02</span>
+  <span class="card-title-en">Mean something</span>
+  <span class="card-title-cn">成为举足轻重的人，而不是废物</span>
+  <span class="card-meta">8 句 · 76 词</span>
+</button>
+<button class="card" data-id="3" data-accent="coral" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <span class="card-no">03</span>
+  <span class="card-title-en">Protect your dream</span>
+  <span class="card-title-cn">捍卫你的梦想</span>
+  <span class="card-meta">6 句 · 44 词</span>
+</button>
+<button class="card" data-id="4" data-accent="purple" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <span class="card-no">04</span>
+  <span class="card-title-en">Good artists copy, great artists steal.</span>
+  <span class="card-title-cn">优秀者模仿，伟大者剽窃。</span>
+  <span class="card-meta">7 句 · 66 词</span>
+</button>
+<button class="card" data-id="5" data-accent="blue" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <span class="card-no">05</span>
+  <span class="card-title-en">Failed over and over and over again</span>
+  <span class="card-title-cn">一次一次又一次的失败</span>
+  <span class="card-meta">5 句 · 41 词</span>
+</button>
+<button class="card" data-id="6" data-accent="green" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <span class="card-no">06</span>
+  <span class="card-title-en">Pushing through the pain</span>
+  <span class="card-title-cn">穿越痛苦</span>
+  <span class="card-meta">7 句 · 95 词</span>
+</button>
+<button class="card" data-id="7" data-accent="pink" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <span class="card-no">07</span>
+  <span class="card-title-en">nasty place</span>
+  <span class="card-title-cn">残酷世界</span>
+  <span class="card-meta">9 句 · 107 词</span>
+</button>
+<button class="card" data-id="8" data-accent="red" style="--f:#FCEBEB;--m:#F7C1C1;--s:#E24B4A;--d:#A32D2D;--ink:#501313">
+  <span class="card-no">08</span>
+  <span class="card-title-en">hit</span>
+  <span class="card-title-cn">打击</span>
+  <span class="card-meta">9 句 · 95 词</span>
+</button>
+<button class="card" data-id="9" data-accent="teal" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <span class="card-no">09</span>
+  <span class="card-title-en">Will you fight?</span>
+  <span class="card-title-cn">你愿意作战吗</span>
+  <span class="card-meta">13 句 · 102 词</span>
+</button>
+<button class="card" data-id="10" data-accent="amber" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <span class="card-no">10</span>
+  <span class="card-title-en">Never surrender</span>
+  <span class="card-title-cn">绝不投降</span>
+  <span class="card-meta">11 句 · 81 词</span>
+</button>
+<button class="card" data-id="11" data-accent="coral" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <span class="card-no">11</span>
+  <span class="card-title-en">Without victory, there is no survival</span>
+  <span class="card-title-cn">没有胜利，无法生存</span>
+  <span class="card-meta">9 句 · 137 词</span>
+</button>
+<button class="card" data-id="12" data-accent="purple" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <span class="card-no">12</span>
+  <span class="card-title-en">It takes a strong man to save himself, and a…</span>
+  <span class="card-title-cn">强者自救，圣者渡人</span>
+  <span class="card-meta">7 句 · 99 词</span>
+</button>
+<button class="card" data-id="13" data-accent="blue" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <span class="card-no">13</span>
+  <span class="card-title-en">Lay this brick perfectly</span>
+  <span class="card-title-cn">砌好这块砖</span>
+  <span class="card-meta">9 句 · 109 词</span>
+</button>
+<button class="card" data-id="14" data-accent="green" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <span class="card-no">14</span>
+  <span class="card-title-en">Do what you need to do</span>
+  <span class="card-title-cn">做你需要做的事情</span>
+  <span class="card-meta">13 句 · 107 词</span>
+</button>
+<button class="card" data-id="15" data-accent="pink" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <span class="card-no">15</span>
+  <span class="card-title-en">Sickening work ethic</span>
+  <span class="card-title-cn">病态的职业精神</span>
+  <span class="card-meta">15 句 · 192 词</span>
+</button>
+<button class="card" data-id="16" data-accent="red" style="--f:#FCEBEB;--m:#F7C1C1;--s:#E24B4A;--d:#A32D2D;--ink:#501313">
+  <span class="card-no">16</span>
+  <span class="card-title-en">Bend your universe</span>
+  <span class="card-title-cn">驱动你的宇宙</span>
+  <span class="card-meta">12 句 · 149 词</span>
+</button>
+<button class="card" data-id="17" data-accent="teal" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <span class="card-no">17</span>
+  <span class="card-title-en">super hard</span>
+  <span class="card-title-cn">超级努力</span>
+  <span class="card-meta">14 句 · 177 词</span>
+</button>
+<button class="card" data-id="18" data-accent="amber" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <span class="card-no">18</span>
+  <span class="card-title-en">Think different</span>
+  <span class="card-title-cn">非同凡响</span>
+  <span class="card-meta">14 句 · 101 词</span>
+</button>
+<button class="card" data-id="19" data-accent="coral" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <span class="card-no">19</span>
+  <span class="card-title-en">I always knew I was going to be rich</span>
+  <span class="card-title-cn">我一直知道我会富有</span>
+  <span class="card-meta">9 句 · 144 词</span>
+</button>
+<button class="card" data-id="20" data-accent="purple" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <span class="card-no">20</span>
+  <span class="card-title-en">Compound interest</span>
+  <span class="card-title-cn">复利法则</span>
+  <span class="card-meta">18 句 · 257 词</span>
+</button>
+<button class="card" data-id="21" data-accent="blue" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <span class="card-no">21</span>
+  <span class="card-title-en">Method of learning</span>
+  <span class="card-title-cn">只有学习了学习的方法才能进步</span>
+  <span class="card-meta">8 句 · 187 词</span>
+</button>
+<button class="card" data-id="22" data-accent="green" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <span class="card-no">22</span>
+  <span class="card-title-en">Change mindset change brain</span>
+  <span class="card-title-cn">改变思维模式，改变大脑</span>
+  <span class="card-meta">5 句 · 102 词</span>
+</button>
+<button class="card" data-id="23" data-accent="pink" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <span class="card-no">23</span>
+  <span class="card-title-en">Grit is the key to success</span>
+  <span class="card-title-cn">毅力是成功的关键</span>
+  <span class="card-meta">16 句 · 244 词</span>
+</button>
+  </div>
+
+  <div class="secthead">
+    <h2>正文</h2><span class="rule"></span><span class="hint">挖空模式下点击空格可临时显示</span>
+  </div>
+
+<section class="sec" id="sec-1" data-id="1" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Reach the goals 主题插画">
+        <title>Reach the goals</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="70" y="150" width="60" height="40" rx="4" fill="#9FE1CB"/>
+<rect x="130" y="118" width="60" height="72" rx="4" fill="#1D9E75"/>
+<rect x="190" y="86" width="60" height="104" rx="4" fill="#0F6E56"/>
+<path d="M220 86 L220 40" stroke="#04342C" stroke-width="3" fill="none"/>
+<path d="M220 40 L262 52 L220 66 Z" fill="#1D9E75"/>
+<circle cx="90" cy="60" r="7" fill="#9FE1CB"/><circle cx="112" cy="60" r="7" fill="#1D9E75"/><circle cx="134" cy="60" r="7" fill="#9FE1CB"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">01 / 23</span>
+      <h2 class="sec-en">Reach the goals</h2>
+      <p class="sec-cn">必须达成目标</p>
+      <div class="sec-stats">
+        <span>5 句</span><span class="dot"></span><span>65 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="My life has been a trade-off.">My life has been a trade-off.</p>
+    <p class="cn">我的人生是一场交易。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="If I wanted to reach the goals I set for myself, I had to get at it and stay at it everyday.">If I wanted to reach the goals I set for myself, I had to get at it and stay at it everyday.</p>
+    <p class="cn">如果我想达到我给自己设定的目标，就必须每天为之奋斗，坚持不懈。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="I had to think about it all the time.">I had to think about it all the time.</p>
+    <p class="cn">必须时刻把它放在心上。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="I had to get up everyday with my mind set on improving something.">I had to get up everyday with my mind set on improving something.</p>
+    <p class="cn">我每天一起床，脑子里就想着要去改进些什么。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="I was driven by a desire to always be on the top of the heap.">I was driven by a desire to always be on the top of the heap.</p>
+    <p class="cn">我一直被一种想要追求卓越的渴望驱策着。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-2" data-id="2" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Mean something 主题插画">
+        <title>Mean something</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <circle cx="360" cy="100" r="72" fill="#FAEEDA"/><circle cx="360" cy="100" r="52" fill="#FAC775"/><circle cx="360" cy="100" r="32" fill="#BA7517"/>
+<circle cx="360" cy="88" r="12" fill="#412402"/>
+<path d="M340 132 Q360 112 380 132 L380 142 Q360 132 340 142 Z" fill="#412402"/>
+<circle cx="200" cy="70" r="14" fill="#FAC775"/><circle cx="200" cy="112" r="14" fill="#BA7517"/><circle cx="200" cy="154" r="14" fill="#FAC775"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">02 / 23</span>
+      <h2 class="sec-en">Mean something</h2>
+      <p class="sec-cn">成为举足轻重的人，而不是废物</p>
+      <div class="sec-stats">
+        <span>8 句</span><span class="dot"></span><span>76 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I want to do good.">I want to do good.</p>
+    <p class="cn">我想做好的事情。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I want the world to be better because I was here.">I want the world to be better because I was here.</p>
+    <p class="cn">我要这个世界因为我而变得更好。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="I want my life, my work, and my family to mean something.">I want my life, my work, and my family to mean something.</p>
+    <p class="cn">我想让我的生活、工作和家庭都因为我而变得更有意义。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="If you’re not making someone else’s life better then you’re wasting your time.">If you’re not making someone else’s life better then you’re wasting your time.</p>
+    <p class="cn">如果你没有给他人的生活带来改变，那你就是在浪费自己的时间！</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="Your life will become better by making other lives better.">Your life will become better by making other lives better.</p>
+    <p class="cn">改善他人的生活，你的生活也会变得更好！</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="I want to represent an idea.">I want to represent an idea.</p>
+    <p class="cn">我想要再现一种理念。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="I want to represent possibilities.">I want to represent possibilities.</p>
+    <p class="cn">我想再现人生的各种可能性。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="I want to represent the idea that you really can make what you want.">I want to represent the idea that you really can make what you want.</p>
+    <p class="cn">我想再现的理念是，你真的可以做成你想要的东西！</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-3" data-id="3" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Protect your dream 主题插画">
+        <title>Protect your dream</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M360 32 L440 62 L440 118 Q440 168 360 190 Q280 168 280 118 L280 62 Z" fill="#FAECE7" stroke="#D85A30" stroke-width="3"/>
+<path d="M360 58 L412 78 L412 118 Q412 152 360 166 Q308 152 308 118 L308 78 Z" fill="#F5C4B3"/>
+<path d="M338 112 L354 128 L386 92" stroke="#4A1B0C" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">03 / 23</span>
+      <h2 class="sec-en">Protect your dream</h2>
+      <p class="sec-cn">捍卫你的梦想</p>
+      <div class="sec-stats">
+        <span>6 句</span><span class="dot"></span><span>44 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="Don’t ever let someone tell you that you can’t do something.">Don’t ever let someone tell you that you can’t do something.</p>
+    <p class="cn">不要让任何人告诉你，你做不成事。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="Not even me.">Not even me.</p>
+    <p class="cn">即便是我也不行。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="You got a dream, you gotta protect it.">You got a dream, you gotta protect it.</p>
+    <p class="cn">如果你有梦想，你要保护它。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="When people can’t do something themselves, they’re gonna tell you that you can’t do it.">When people can’t do something themselves, they’re gonna tell you that you can’t do it.</p>
+    <p class="cn">当人们自己做不到的时候，他们会说你也成不了大器。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="You want something, go get it.">You want something, go get it.</p>
+    <p class="cn">如果你要什么，去得到它。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="Period.">Period.</p>
+    <p class="cn">绝不迟疑。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-4" data-id="4" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Good artists copy, great artists steal. 主题插画">
+        <title>Good artists copy, great artists steal.</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="120" y="46" width="130" height="96" rx="6" fill="#EEEDFE" stroke="#CECBF6" stroke-width="2"/>
+<rect x="240" y="76" width="130" height="96" rx="6" fill="#CECBF6" stroke="#7F77DD" stroke-width="2"/>
+<rect x="360" y="106" width="130" height="96" rx="6" fill="#7F77DD" stroke="#534AB7" stroke-width="2"/>
+<circle cx="150" cy="76" r="10" fill="#7F77DD"/><circle cx="270" cy="106" r="10" fill="#534AB7"/><circle cx="390" cy="136" r="10" fill="#EEEDFE"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">04 / 23</span>
+      <h2 class="sec-en">Good artists copy, great artists steal.</h2>
+      <p class="sec-cn">优秀者模仿，伟大者剽窃。</p>
+      <div class="sec-stats">
+        <span>7 句</span><span class="dot"></span><span>66 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="How do you know what&#x27;s the right direction?">How do you know what&#x27;s the right direction?</p>
+    <p class="cn">你怎么知道哪个方向是正确的？</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="Ultimately it comes down to taste.">Ultimately it comes down to taste.</p>
+    <p class="cn">其实归根到底是品位的问题。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="It comes down to taste.">It comes down to taste.</p>
+    <p class="cn">那终究是品味问题。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s a matter of trying to expose yourself to the best things that humans have done.">It’s a matter of trying to expose yourself to the best things that humans have done.</p>
+    <p class="cn">你要尽量让自己接触到这个世界上最优秀的事物。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="And then try to bring those things into what you are doing.">And then try to bring those things into what you are doing.</p>
+    <p class="cn">并把它运用到自己的工作中去。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="Picasso had a saying, “Good artists copy, great artists steal.”">Picasso had a saying, “Good artists copy, great artists steal.”</p>
+    <p class="cn">毕加索说过，“优秀者模仿, 伟大者剽窃。”</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="We have always been shameless about stealing great ideas.">We have always been shameless about stealing great ideas.</p>
+    <p class="cn">当我们剽窃别人的卓越的创意的时候，从不觉得羞愧。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-5" data-id="5" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Failed over and over and over again 主题插画">
+        <title>Failed over and over and over again</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <circle cx="360" cy="110" r="80" fill="#E6F1FB"/><circle cx="360" cy="110" r="58" fill="#B5D4F4"/><circle cx="360" cy="110" r="36" fill="#378ADD"/>
+<circle cx="360" cy="110" r="12" fill="#042C53"/>
+<circle cx="238" cy="60" r="5" fill="#378ADD"/><circle cx="252" cy="146" r="5" fill="#185FA5"/><circle cx="486" cy="72" r="5" fill="#378ADD"/><circle cx="470" cy="158" r="5" fill="#185FA5"/>
+<circle cx="300" cy="34" r="5" fill="#B5D4F4"/><circle cx="430" cy="192" r="5" fill="#B5D4F4"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">05 / 23</span>
+      <h2 class="sec-en">Failed over and over and over again</h2>
+      <p class="sec-cn">一次一次又一次的失败</p>
+      <div class="sec-stats">
+        <span>5 句</span><span class="dot"></span><span>41 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I’ve missed more than 9000 shots in my career.">I’ve missed more than 9000 shots in my career.</p>
+    <p class="cn">我的职业生涯投篮失误超过9000次。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I’ve lost almost 300 games.">I’ve lost almost 300 games.</p>
+    <p class="cn">我输了大约300场比赛。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="26 times I’ve been trusted to take the game winning shot and missed.">26 times I’ve been trusted to take the game winning shot and missed.</p>
+    <p class="cn">有26次我被委以重任投制胜一球，但失手了。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="I’ve failed over and over and over again in my life.">I’ve failed over and over and over again in my life.</p>
+    <p class="cn">我这一生，一次一次又一次失败。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="And that is why I succeed.">And that is why I succeed.</p>
+    <p class="cn">那就是我为什么能够成功的原因。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-6" data-id="6" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Pushing through the pain 主题插画">
+        <title>Pushing through the pain</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M60 150 Q120 110 180 150 T300 150 T420 150 T540 150 T640 150" stroke="#C0DD97" stroke-width="4" fill="none"/>
+<path d="M60 176 Q120 136 180 176 T300 176 T420 176 T540 176 T640 176" stroke="#EAF3DE" stroke-width="4" fill="none"/>
+<path d="M100 168 L200 140 L300 132 L400 96 L500 74 L600 48" stroke="#639922" stroke-width="5" fill="none" stroke-linecap="round"/>
+<circle cx="600" cy="48" r="10" fill="#3B6D11"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">06 / 23</span>
+      <h2 class="sec-en">Pushing through the pain</h2>
+      <p class="sec-cn">穿越痛苦</p>
+      <div class="sec-stats">
+        <span>7 句</span><span class="dot"></span><span>95 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="As a magician, I try to create images that make people stop and think.">As a magician, I try to create images that make people stop and think.</p>
+    <p class="cn">作为一个魔术师，我总是尝试去创造一个现象，可以让人们驻足思考。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I also try to challenge myself to do things that doctors say are not possible.">I also try to challenge myself to do things that doctors say are not possible.</p>
+    <p class="cn">我也试着挑战自己，做一些医生看来不可能的事情。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="As a magician I try to show things to people that seem impossible.">As a magician I try to show things to people that seem impossible.</p>
+    <p class="cn">作为一个魔术师，我试着展示一些东西，那些看似不可能的事。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="And I think magic, whether I&#x27;m holding my breath or shuffling a deck of cards, is pretty simple.">And I think magic, whether I&#x27;m holding my breath or shuffling a deck of cards, is pretty simple.</p>
+    <p class="cn">我认为魔术，不管是水下屏气，还是捣鼓一副纸牌，道理都很简单。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="It&#x27;s practice, it&#x27;s training.">It&#x27;s practice, it&#x27;s training.</p>
+    <p class="cn">就是练习，训练，以及。。。。（流泪）</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="And It&#x27;s practice, it&#x27;s training and experimenting, while pushing through the pain to be the best that I can be.">And It&#x27;s practice, it&#x27;s training and experimenting, while pushing through the pain to be the best that I can be.</p>
+    <p class="cn">就是练习，训练，以及不断尝试。去强忍过那些极痛苦的时刻，做自己能做的一切。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="And that&#x27;s what magic is to me, so, thank you. (Applause)">And that&#x27;s what magic is to me, so, thank you. (Applause)</p>
+    <p class="cn">这就是魔术对于我的意义。谢谢你们。（掌声）</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-7" data-id="7" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="nasty place 主题插画">
+        <title>nasty place</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M120 118 Q120 76 168 76 Q182 44 226 48 Q262 24 300 52 Q346 40 366 78 Q414 74 424 112 Z" fill="#F4C0D1"/>
+<path d="M300 122 L342 122 L322 178 Z" fill="#D4537E"/>
+<path d="M342 122 L384 122 L364 178 Z" fill="#F4C0D1"/>
+<path d="M384 122 L426 122 L406 178 Z" fill="#FBEAF0"/>
+<path d="M200 196 Q300 168 400 196" stroke="#FBEAF0" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">07 / 23</span>
+      <h2 class="sec-en">nasty place</h2>
+      <p class="sec-cn">残酷世界</p>
+      <div class="sec-stats">
+        <span>9 句</span><span class="dot"></span><span>107 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="Then the time come for you to be your own man and take on the world and you did.">Then the time come for you to be your own man and take on the world and you did.</p>
+    <p class="cn">然后就是你自己奋斗的人生了，自己去承担自己的事情，你也确实做得很好。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="But somewhere along the line, you changed.">But somewhere along the line, you changed.</p>
+    <p class="cn">但是有些时候，你变了。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="You stopped being you.">You stopped being you.</p>
+    <p class="cn">你不再是你。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="You let people stick a finger in your face and tell you you’re no good.">You let people stick a finger in your face and tell you you’re no good.</p>
+    <p class="cn">你让别人指着你的脸说你不好。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="And when things got hard, you started looking for something to blame like a big shadow.">And when things got hard, you started looking for something to blame like a big shadow.</p>
+    <p class="cn">而且遇到不顺心的事时，你开始怪罪于其他事情，就像巨大的阴影。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="Let me tell you something you already know.">Let me tell you something you already know.</p>
+    <p class="cn">让我告诉你一些你已经知道的事。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="The world ain’t all sunshine and rainbows.">The world ain’t all sunshine and rainbows.</p>
+    <p class="cn">这世界不完全是阳光和彩虹。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s a very mean and nasty place, and I don’t care how tough you are …">It’s a very mean and nasty place, and I don’t care how tough you are …</p>
+    <p class="cn">这是一个非常刻薄艰险的世界，我不在乎你是多么坚强……</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="It will beat you to your knees and keep you there permanently if you let it.">It will beat you to your knees and keep you there permanently if you let it.</p>
+    <p class="cn">如果你屈服的话，它会永远把你打趴下的。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-8" data-id="8" style="--f:#FCEBEB;--m:#F7C1C1;--s:#E24B4A;--d:#A32D2D;--ink:#501313">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="hit 主题插画">
+        <title>hit</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="300" y="30" width="120" height="52" rx="10" fill="#F7C1C1"/>
+<rect x="288" y="78" width="144" height="62" rx="12" fill="#E24B4A"/>
+<rect x="300" y="136" width="30" height="46" rx="8" fill="#F7C1C1"/><rect x="340" y="136" width="30" height="46" rx="8" fill="#F7C1C1"/><rect x="380" y="136" width="30" height="46" rx="8" fill="#F7C1C1"/>
+<path d="M212 60 L252 76" stroke="#A32D2D" stroke-width="4" stroke-linecap="round"/><path d="M212 108 L256 108" stroke="#A32D2D" stroke-width="4" stroke-linecap="round"/><path d="M212 156 L252 140" stroke="#A32D2D" stroke-width="4" stroke-linecap="round"/>
+<path d="M470 46 L500 62" stroke="#A32D2D" stroke-width="4" stroke-linecap="round"/><path d="M470 176 L500 160" stroke="#A32D2D" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">08 / 23</span>
+      <h2 class="sec-en">hit</h2>
+      <p class="sec-cn">打击</p>
+      <div class="sec-stats">
+        <span>9 句</span><span class="dot"></span><span>95 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="You, me or nobody is gonna hit as hard as life.">You, me or nobody is gonna hit as hard as life.</p>
+    <p class="cn">你，我，没人能够击打得比生活还重。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="But it ain’t about how hard you hit.">But it ain’t about how hard you hit.</p>
+    <p class="cn">但是这并不在于你击打得多重。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s about how hard you can get hit and keep moving forward.">It’s about how hard you can get hit and keep moving forward.</p>
+    <p class="cn">而在于无论你被击打的有多重，但却能继续向前。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="How much you can take and keep moving forward.">How much you can take and keep moving forward.</p>
+    <p class="cn">你能承受多少，并且继续前进。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="That’s how winning is done!">That’s how winning is done!</p>
+    <p class="cn">这才是真正的胜利。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="If you know what you’re worth, go and get what you’re worth.">If you know what you’re worth, go and get what you’re worth.</p>
+    <p class="cn">如果你知道你的价值，那么就前进，去实现你的价值。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="But you gotta be willing to take the hits, and not pointing fingers saying you ain’t where you wanna be，because of him or her or anybody !">But you gotta be willing to take the hits, and not pointing fingers saying you ain’t where you wanna be，because of him or her or anybody !</p>
+    <p class="cn">但是你必须乐意承受打击，而不是没能实现目标时却指着别人说，是因为他或她的原因。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="Cowards do that, and that ain’t you!">Cowards do that, and that ain’t you!</p>
+    <p class="cn">懦夫才会那么做，你不是！</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="You’re better than that!">You’re better than that!</p>
+    <p class="cn">你远比那个出色！</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-9" data-id="9" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Will you fight? 主题插画">
+        <title>Will you fight?</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M180 176 L180 40" stroke="#04342C" stroke-width="4" fill="none"/>
+<path d="M180 40 L286 62 L180 92 Z" fill="#1D9E75"/>
+<path d="M340 176 L340 56" stroke="#04342C" stroke-width="4" fill="none"/>
+<path d="M340 56 L446 78 L340 108 Z" fill="#9FE1CB"/>
+<path d="M500 176 L500 72" stroke="#04342C" stroke-width="4" fill="none"/>
+<path d="M500 72 L606 94 L500 124 Z" fill="#E1F5EE" stroke="#1D9E75" stroke-width="2"/>
+<path d="M80 180 L620 180" stroke="#9FE1CB" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">09 / 23</span>
+      <h2 class="sec-en">Will you fight?</h2>
+      <p class="sec-cn">你愿意作战吗</p>
+      <div class="sec-stats">
+        <span>13 句</span><span class="dot"></span><span>102 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I am William Wallace.">I am William Wallace.</p>
+    <p class="cn">我是威廉华莱士。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="And I see a whole army of my countrymen here in defiance of tyranny.">And I see a whole army of my countrymen here in defiance of tyranny.</p>
+    <p class="cn">我看到我族组成的军队向暴政宣战。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="You’ve come to fight as free men,">You’ve come to fight as free men,</p>
+    <p class="cn">你们来到这里作为自由人参战。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="And free men you are.">And free men you are.</p>
+    <p class="cn">你们确实是自由人。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="What will you do with that freedom?">What will you do with that freedom?</p>
+    <p class="cn">你们如何对待自由？</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="Will you fight?">Will you fight?</p>
+    <p class="cn">你们愿意作战吗？</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="Fight, and you may die.">Fight, and you may die.</p>
+    <p class="cn">作战，你们可能会死。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="Run, and you’ll live … at least awhile.">Run, and you’ll live … at least awhile.</p>
+    <p class="cn">逃走，你会活着……至少一阵子。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="And dying in your beds many years from now.">And dying in your beds many years from now.</p>
+    <p class="cn">几年后在床上老死。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="Would you be willing to trade all the days from this day to that.">Would you be willing to trade all the days from this day to that.</p>
+    <p class="cn">你们是否愿意用所有的这些日子来换取。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="For one chance, just for one chance.">For one chance, just for one chance.</p>
+    <p class="cn">为了一个机会，仅仅为了一个机会。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="To come back here and tell our enemies that they may take our lives,">To come back here and tell our enemies that they may take our lives,</p>
+    <p class="cn">回到这里，告诉我们的敌人他们或许会夺走我们的生命，</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="But they’ll never take our freedom!">But they’ll never take our freedom!</p>
+    <p class="cn">但他们永远夺不走我们的自由！</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-10" data-id="10" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Never surrender 主题插画">
+        <title>Never surrender</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M60 170 Q140 130 220 160 T380 158 T540 164 T640 150" stroke="#BA7517" stroke-width="4" fill="none"/>
+<rect x="150" y="106" width="20" height="54" rx="3" fill="#FAC775"/><rect x="240" y="90" width="20" height="70" rx="3" fill="#BA7517"/>
+<rect x="330" y="112" width="20" height="48" rx="3" fill="#FAC775"/><rect x="420" y="86" width="20" height="74" rx="3" fill="#BA7517"/>
+<rect x="510" y="104" width="20" height="56" rx="3" fill="#FAC775"/>
+<path d="M60 60 L140 60 L176 34 L216 60 L300 60" stroke="#FAC775" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">10 / 23</span>
+      <h2 class="sec-en">Never surrender</h2>
+      <p class="sec-cn">绝不投降</p>
+      <div class="sec-stats">
+        <span>11 句</span><span class="dot"></span><span>81 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall not flag or fail.">We shall not flag or fail.</p>
+    <p class="cn">我们绝不投降，也不会失败。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall go on to the end.">We shall go on to the end.</p>
+    <p class="cn">我们将战斗到底。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight in France.">We shall fight in France.</p>
+    <p class="cn">我们将在法国作战。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight on the seas and oceans.">We shall fight on the seas and oceans.</p>
+    <p class="cn">我们将在海洋中作战。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight with growing confidence and growing strength in the air.">We shall fight with growing confidence and growing strength in the air.</p>
+    <p class="cn">我们将以越来越大的信心和越来越强的力量在空中作战。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall defend our island, whatever the cost may be.">We shall defend our island, whatever the cost may be.</p>
+    <p class="cn">我们将不惜一切代价保卫本土。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight on the beaches.">We shall fight on the beaches.</p>
+    <p class="cn">我们将在海滩作战。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight on the landing grounds.">We shall fight on the landing grounds.</p>
+    <p class="cn">我们将在敌人的登陆点作战。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight in the fields and in the streets.">We shall fight in the fields and in the streets.</p>
+    <p class="cn">我们将在田野和街头作战。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall fight in the hills.">We shall fight in the hills.</p>
+    <p class="cn">我们将在山区作战。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="We shall never surrender.">We shall never surrender.</p>
+    <p class="cn">我们绝不投降。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-11" data-id="11" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Without victory, there is no survival 主题插画">
+        <title>Without victory, there is no survival</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M300 44 L420 44 L420 82 Q420 138 360 156 Q300 138 300 82 Z" fill="#D85A30"/>
+<path d="M300 52 L272 52 Q272 96 300 104" stroke="#993C1D" stroke-width="6" fill="none"/>
+<path d="M420 52 L448 52 Q448 96 420 104" stroke="#993C1D" stroke-width="6" fill="none"/>
+<rect x="348" y="156" width="24" height="26" fill="#F5C4B3"/>
+<rect x="320" y="182" width="80" height="14" rx="4" fill="#993C1D"/>
+<path d="M360 76 L368 98 L392 98 L372 112 L380 134 L360 120 L340 134 L348 112 L328 98 L352 98 Z" fill="#FAECE7"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">11 / 23</span>
+      <h2 class="sec-en">Without victory, there is no survival</h2>
+      <p class="sec-cn">没有胜利，无法生存</p>
+      <div class="sec-stats">
+        <span>9 句</span><span class="dot"></span><span>137 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I would say to the House, as I said to those who have joined this government: &quot;I have nothing to offer but blood, toil, tears and sweat.">I would say to the House, as I said to those who have joined this government: &quot;I have nothing to offer but blood, toil, tears and sweat.</p>
+    <p class="cn">正如我曾对参加本届政府的成员所说的那样，我要向下院说：“我没什么可以奉献，有的只是热血、辛劳、眼泪和汗水。”</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="We have before us an ordeal of the most grievous kind.">We have before us an ordeal of the most grievous kind.</p>
+    <p class="cn">摆在我们面前的，是一场严峻的极为痛苦的考验。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="We have before us many, many long months of struggle and of suffering.">We have before us many, many long months of struggle and of suffering.</p>
+    <p class="cn">在我们面前，有许多许多漫长的斗争和苦难的岁月。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="You ask, what is our policy?">You ask, what is our policy?</p>
+    <p class="cn">你们问：我们的政策是什么？</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="I will say: It is to wage war, by sea, land and air, with all our might, with all the strength that God has given us; to wage war against a monstrous tyranny, never surpassed in the dark, and lamentable catalogue of human crime.">I will say: It is to wage war, by sea, land and air, with all our might, with all the strength that God has given us; to wage war against a monstrous tyranny, never surpassed in the dark, and lamentable catalogue of human crime.</p>
+    <p class="cn">我要说，我们的政策就是用我们全部能力，用上帝所给予我们的全部力量，在海上、陆地和空中进行斗争，同一个在人类黑暗悲惨的罪恶史上从未有过的穷凶极恶的暴政进行斗争。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="That is our policy.">That is our policy.</p>
+    <p class="cn">这就是我们的政策。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="You ask, what is our aim?">You ask, what is our aim?</p>
+    <p class="cn">你们问：我们的目标是什么？</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="I can answer in one word: victory.">I can answer in one word: victory.</p>
+    <p class="cn">我可以用一个词来回答：胜利。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="Victory at all costs, victory in spite of all terror, victory, however long and hard the road may be.">Victory at all costs, victory in spite of all terror, victory, however long and hard the road may be.</p>
+    <p class="cn">不惜一切代价，去赢得胜利；无论多么可怕，也要赢得胜利，无论道路多么遥远和艰难，也要赢得胜利。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-12" data-id="12" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="It takes a strong man to save himself, and a great man to save another. 主题插画">
+        <title>It takes a strong man to save himself, and a great man to save another.</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="150" y="88" width="54" height="100" rx="6" fill="#CECBF6"/>
+<rect x="222" y="60" width="54" height="128" rx="6" fill="#7F77DD"/>
+<rect x="294" y="88" width="54" height="100" rx="6" fill="#CECBF6"/>
+<circle cx="390" cy="72" r="30" fill="#EEEDFE"/><circle cx="390" cy="72" r="16" fill="#7F77DD"/>
+<path d="M390 102 L390 188" stroke="#534AB7" stroke-width="3" fill="none"/>
+<path d="M150 188 L560 188" stroke="#CECBF6" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">12 / 23</span>
+      <h2 class="sec-en">It takes a strong man to save himself, and a great man to save another.</h2>
+      <p class="sec-cn">强者自救，圣者渡人</p>
+      <div class="sec-stats">
+        <span>7 句</span><span class="dot"></span><span>99 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="These walls are funny.">These walls are funny.</p>
+    <p class="cn">（监狱里的高墙）实在是很有趣。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="First you hate them, then you get used to them.">First you hate them, then you get used to them.</p>
+    <p class="cn">刚入狱的时候你痛恨周围的高墙，慢慢地，你习惯了生活在其中；</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="Enough time passes，you depend on them. That&#x27;s institutionalized.">Enough time passes，you depend on them. That&#x27;s institutionalized.</p>
+    <p class="cn">最终你会发现自己不得不依靠它而生存。这就是体制化。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="I guess it comes down to a simple choice: get busy living or get busy dying.">I guess it comes down to a simple choice: get busy living or get busy dying.</p>
+    <p class="cn">生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="In 1966, Andy Dufresne escaped from Shawshank Prison.">In 1966, Andy Dufresne escaped from Shawshank Prison.</p>
+    <p class="cn">1966年，安迪.杜弗兰从肖申克监狱脱逃。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="All they found (of him) was a muddy set of prison clothes, a bar of soap, and an old rock-hammer damn near worn down to the nub.">All they found (of him) was a muddy set of prison clothes, a bar of soap, and an old rock-hammer damn near worn down to the nub.</p>
+    <p class="cn">他们只发现了他的一套沾满泥浆的狱服，一条肥皂和一把磨得几乎只剩下把儿的石锤。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="I remember thinking it would take a man six hundred years to tunnel through the wall with it. Old Andy did it in less than twenty.">I remember thinking it would take a man six hundred years to tunnel through the wall with it. Old Andy did it in less than twenty.</p>
+    <p class="cn">我曾经想过一个人用这把锤头在墙上挖通隧道，需要花六百年，安迪用了不到二十年。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-13" data-id="13" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Lay this brick perfectly 主题插画">
+        <title>Lay this brick perfectly</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <g fill="#B5D4F4" stroke="#E6F1FB" stroke-width="3">
+<rect x="140" y="46" width="80" height="34"/><rect x="228" y="46" width="80" height="34"/><rect x="316" y="46" width="80" height="34"/><rect x="404" y="46" width="80" height="34"/>
+<rect x="98" y="88" width="80" height="34"/><rect x="186" y="88" width="80" height="34"/><rect x="274" y="88" width="80" height="34"/><rect x="362" y="88" width="80" height="34"/><rect x="450" y="88" width="80" height="34"/>
+<rect x="140" y="130" width="80" height="34"/><rect x="228" y="130" width="80" height="34"/><rect x="316" y="130" width="80" height="34"/><rect x="404" y="130" width="80" height="34"/>
+</g>
+<rect x="316" y="130" width="80" height="34" fill="#378ADD" stroke="#185FA5" stroke-width="3"/>
+<path d="M356 176 L356 200" stroke="#185FA5" stroke-width="4" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">13 / 23</span>
+      <h2 class="sec-en">Lay this brick perfectly</h2>
+      <p class="sec-cn">砌好这块砖</p>
+      <div class="sec-stats">
+        <span>9 句</span><span class="dot"></span><span>109 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="One summer his dad tore down a brick wall in the front of his business and told 12-year-old Will and his 9-year-old brother to rebuild it.">One summer his dad tore down a brick wall in the front of his business and told 12-year-old Will and his 9-year-old brother to rebuild it.</p>
+    <p class="cn">一年夏天威尔的父亲推到了自家商店门前的一面墙，让12岁的威尔和他9岁的弟弟重建它。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="A job they said was impossible.">A job they said was impossible.</p>
+    <p class="cn">他们认为这是一个不可完成的工作。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="It took them a year and a half ,but they did it.">It took them a year and a half ,but they did it.</p>
+    <p class="cn">那花了他们一年半的时间，但是，他们做到了。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="And he said, “now don’t you ever tell me there’s something that you can’t do.”">And he said, “now don’t you ever tell me there’s something that you can’t do.”</p>
+    <p class="cn">威尔的父亲说，“那么，永远不要跟我说有什么事你做不到”。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="You don’t set out to build a wall.">You don’t set out to build a wall.</p>
+    <p class="cn">你不要想着去造一堵墙。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="You don’t say, “I’m going to build the biggest, baddest, greatest wall that’s ever been built.”">You don’t say, “I’m going to build the biggest, baddest, greatest wall that’s ever been built.”</p>
+    <p class="cn">不要想着说，我要造世界上最大，最厉害，最宏伟壮观的墙。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="You don’t start there.">You don’t start there.</p>
+    <p class="cn">不要抱着这种态度开始。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="You say, “I’m going to lay this brick as perfectly as a brick can be laid.”">You say, “I’m going to lay this brick as perfectly as a brick can be laid.”</p>
+    <p class="cn">你要说，我要砌好这块砖，砌的尽可能完美无缺。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="You do that every single day.">You do that every single day.</p>
+    <p class="cn">你每天都要这样去做。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-14" data-id="14" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Do what you need to do 主题插画">
+        <title>Do what you need to do</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M360 176 Q288 126 288 88 Q288 54 322 54 Q350 54 360 82 Q370 54 398 54 Q432 54 432 88 Q432 126 360 176 Z" fill="#639922"/>
+<path d="M360 158 Q308 120 308 92 Q308 72 328 72 Q348 72 360 94 Q372 72 392 72 Q412 72 412 92 Q412 120 360 158 Z" fill="#EAF3DE"/>
+<circle cx="360" cy="106" r="12" fill="#C0DD97"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">14 / 23</span>
+      <h2 class="sec-en">Do what you need to do</h2>
+      <p class="sec-cn">做你需要做的事情</p>
+      <div class="sec-stats">
+        <span>13 句</span><span class="dot"></span><span>107 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I have a great time with my life, and I want to share it.">I have a great time with my life, and I want to share it.</p>
+    <p class="cn">我的生命中有美好的时光，我想要分享。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I love living.">I love living.</p>
+    <p class="cn">我爱生活。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="I think that&#x27;s infectious, it&#x27;s something you can&#x27;t fake.">I think that&#x27;s infectious, it&#x27;s something you can&#x27;t fake.</p>
+    <p class="cn">我认为那是有感染力的，那是无法伪装的。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="Greatness is not this wonderful, esoteric elusive god-like feature that only special people possess.">Greatness is not this wonderful, esoteric elusive god-like feature that only special people possess.</p>
+    <p class="cn">伟大不是那么崇高辉煌、深奥难测、难以捉摸、上天钟爱的特质，不只是少数特别的人才具备。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s something that truly exists within all of us.">It’s something that truly exists within all of us.</p>
+    <p class="cn">这种东西其实潜藏在我们每一个人身上。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s very simple.">It’s very simple.</p>
+    <p class="cn">它非常简单。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="This is what I believe, and I’m willing to die for it.">This is what I believe, and I’m willing to die for it.</p>
+    <p class="cn">这就是我的信念，我愿意用生命来证明这一点。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="Period.">Period.</p>
+    <p class="cn">毫不迟疑。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s that simple.">It’s that simple.</p>
+    <p class="cn">就是这么简单。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="I know who I am, I know what I believe, and that’s all I need to know.">I know who I am, I know what I believe, and that’s all I need to know.</p>
+    <p class="cn">我知道我是谁，我知道我的信念，那就是我需要知道的全部。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="From there, you do what you need to to.">From there, you do what you need to to.</p>
+    <p class="cn">因此，你只要做你需要做的事情。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="You know.">You know.</p>
+    <p class="cn">你知道.</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="I think what happens is we make the situation more complex">I think what happens is we make the situation more complex</p>
+    <p class="cn">我认为实际发生的事，我们自己把事情弄复杂了。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-15" data-id="15" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Sickening work ethic 主题插画">
+        <title>Sickening work ethic</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="120" y="130" width="440" height="16" rx="8" fill="#F4C0D1"/>
+<path d="M120 146 Q240 176 360 146 T600 146" stroke="#D4537E" stroke-width="4" fill="none"/>
+<circle cx="176" cy="130" r="12" fill="#993556"/><circle cx="546" cy="130" r="12" fill="#993556"/>
+<circle cx="340" cy="70" r="18" fill="#D4537E"/>
+<path d="M340 88 L340 112 M340 96 L310 106 M340 96 L372 104 M340 112 L322 138 M340 112 L358 138" stroke="#4B1528" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M410 52 L436 52 M410 66 L436 66" stroke="#F4C0D1" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">15 / 23</span>
+      <h2 class="sec-en">Sickening work ethic</h2>
+      <p class="sec-cn">病态的职业精神</p>
+      <div class="sec-stats">
+        <span>15 句</span><span class="dot"></span><span>192 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things.">The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things.</p>
+    <p class="cn">天赋和技能之间的差别是那些追求成功、追求梦想、想做事的人最容易误解的观念之一。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="Talent you have naturally.">Talent you have naturally.</p>
+    <p class="cn">天赋是与生俱来的。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="Skill is only developed by hours and hours and hours of beating on your craft.">Skill is only developed by hours and hours and hours of beating on your craft.</p>
+    <p class="cn">技能只能通过成千上万小时锤炼而来。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="I&#x27;ve never really viewed myself as particularly talented.">I&#x27;ve never really viewed myself as particularly talented.</p>
+    <p class="cn">我从来不认为自己有特殊的天赋。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="And where I excel is ridiculous, sickening, work ethic.">And where I excel is ridiculous, sickening, work ethic.</p>
+    <p class="cn">我擅长的是，荒唐的，病态的，职业精神。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="You know, while the other guy&#x27;s sleeping? I&#x27;m working.">You know, while the other guy&#x27;s sleeping? I&#x27;m working.</p>
+    <p class="cn">你知道，当别人睡觉得时候，我在工作。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="While the other guy&#x27;s eatin&#x27;? I&#x27;m working.">While the other guy&#x27;s eatin&#x27;? I&#x27;m working.</p>
+    <p class="cn">当别人吃饭的时候，我在工作。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="There’s no easy way around it.">There’s no easy way around it.</p>
+    <p class="cn">成功从来没有容易的路可走。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="No matter how talented you are, your talent is going to fail you if you’re not skilled.">No matter how talented you are, your talent is going to fail you if you’re not skilled.</p>
+    <p class="cn">不管你的天赋有多么出色，再好的天赋也会让你失败，如果你没有练出技能来。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="If you don’t study, work really hard and dedicate yourself to getting better every single day.">If you don’t study, work really hard and dedicate yourself to getting better every single day.</p>
+    <p class="cn">如果你没有非常用心的学习，工作，没有致力于让自己每天进步一点点。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="You’ll never be able to communicate your artistry to people the way that you want.">You’ll never be able to communicate your artistry to people the way that you want.</p>
+    <p class="cn">那你怎能让别人确信你能过自己想要的生活呢。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="The only thing that I see that is distinctly different about me is that I’m not afraid to die on a treadmill.">The only thing that I see that is distinctly different about me is that I’m not afraid to die on a treadmill.</p>
+    <p class="cn">我觉得我唯一不同的一点就是，我永远不怕在跑步机上坚持到底。</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="You might have more talent than me, you might be smarter than me, but if we get on a treadmill together，there’re two things.">You might have more talent than me, you might be smarter than me, but if we get on a treadmill together，there’re two things.</p>
+    <p class="cn">你可能天赋比我强，你也可能比我聪明，但是如果我们同时踏上跑步机，那只有两个结果。</p>
+  </div>
+</li><li class="line" data-i="14">
+  <span class="line-no">14</span>
+  <div class="line-body">
+    <p class="en" data-en="You’re getting off first, or I’m gonna die.">You’re getting off first, or I’m gonna die.</p>
+    <p class="cn">你会先下去，而我会跑到最后一刻。</p>
+  </div>
+</li><li class="line" data-i="15">
+  <span class="line-no">15</span>
+  <div class="line-body">
+    <p class="en" data-en="It’s really that simple.">It’s really that simple.</p>
+    <p class="cn">就是这么简单。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-16" data-id="16" style="--f:#FCEBEB;--m:#F7C1C1;--s:#E24B4A;--d:#A32D2D;--ink:#501313">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Bend your universe 主题插画">
+        <title>Bend your universe</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <circle cx="360" cy="112" r="84" fill="none" stroke="#F7C1C1" stroke-width="3"/>
+<circle cx="360" cy="112" r="58" fill="none" stroke="#E24B4A" stroke-width="3"/>
+<circle cx="360" cy="112" r="30" fill="#A32D2D"/>
+<circle cx="360" cy="28" r="12" fill="#E24B4A"/>
+<circle cx="444" cy="112" r="10" fill="#F7C1C1"/>
+<circle cx="302" cy="170" r="9" fill="#E24B4A"/>
+<circle cx="238" cy="62" r="7" fill="#F7C1C1"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">16 / 23</span>
+      <h2 class="sec-en">Bend your universe</h2>
+      <p class="sec-cn">驱动你的宇宙</p>
+      <div class="sec-stats">
+        <span>12 句</span><span class="dot"></span><span>149 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="Our thoughts, feelings, dreams, and ideas are physical in the Universe.">Our thoughts, feelings, dreams, and ideas are physical in the Universe.</p>
+    <p class="cn">我们的想法、情感、梦想、理念在宇宙中都是物质的。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="If we dream something, if we picture something, and if we commit ourselves to it – that is a physical thrust towards realization that we send out into the universe.">If we dream something, if we picture something, and if we commit ourselves to it – that is a physical thrust towards realization that we send out into the universe.</p>
+    <p class="cn">如果我们有了梦想，如果我们有了图像，如果我们让自己与它一致，那么，它们就是物质层面的延伸，使得我们可以在宇宙中实现它们。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="The universe is not a thing that’s going to push us around.">The universe is not a thing that’s going to push us around.</p>
+    <p class="cn">宇宙并不是把我们推来推去的东西。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="The world, people and situations are not going to push us around.">The world, people and situations are not going to push us around.</p>
+    <p class="cn">人们，世界和环境并不会改变我们的追求。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="We are going to bend the universe.">We are going to bend the universe.</p>
+    <p class="cn">我们将驱动宇宙。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="We are going to command and DEMAND that the universe become what we want it to be.">We are going to command and DEMAND that the universe become what we want it to be.</p>
+    <p class="cn">我们能够命令和要求宇宙成为我们希望成为的样子。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="I studied the patterns of the universe.">I studied the patterns of the universe.</p>
+    <p class="cn">我研究过宇宙的模式。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="There’s a redemptive power that making a choice has.">There’s a redemptive power that making a choice has.</p>
+    <p class="cn">人做选择的时候会产生一种救赎的力量。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="Rather than feeling like you’re just affected by all the things happening, make a choice.">Rather than feeling like you’re just affected by all the things happening, make a choice.</p>
+    <p class="cn">不要感到你的命运仅仅是被发生的事情所影响，做出你的选择！</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="Just DECIDE what you’re gonna be, who you’re gonna be and how you’re gonna do it.">Just DECIDE what you’re gonna be, who you’re gonna be and how you’re gonna do it.</p>
+    <p class="cn">你必须决定，只要决定，你要成为什么，你要成为谁，你将做什么。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="Just decide.">Just decide.</p>
+    <p class="cn">做出你的决定！</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="From that point on, the Universe is gonna get out your way.">From that point on, the Universe is gonna get out your way.</p>
+    <p class="cn">到那时，整个宇宙都会自动为你让路。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-17" data-id="17" style="--f:#E1F5EE;--m:#9FE1CB;--s:#1D9E75;--d:#0F6E56;--ink:#04342C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="super hard 主题插画">
+        <title>super hard</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <circle cx="300" cy="110" r="72" fill="#E1F5EE" stroke="#1D9E75" stroke-width="3"/>
+<path d="M300 110 L300 62 M300 110 L338 128" stroke="#04342C" stroke-width="5" stroke-linecap="round" fill="none"/>
+<circle cx="470" cy="124" r="42" fill="#9FE1CB"/>
+<path d="M512 106 Q542 106 542 124 Q542 142 512 142" stroke="#0F6E56" stroke-width="6" fill="none"/>
+<rect x="428" y="86" width="84" height="12" rx="4" fill="#1D9E75"/>
+<path d="M462 66 Q450 52 462 38 M492 66 Q480 52 492 38" stroke="#9FE1CB" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">17 / 23</span>
+      <h2 class="sec-en">super hard</h2>
+      <p class="sec-cn">超级努力</p>
+      <div class="sec-stats">
+        <span>14 句</span><span class="dot"></span><span>177 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="The first is you need to work, if you, depending on how well you want to do.">The first is you need to work, if you, depending on how well you want to do.</p>
+    <p class="cn">首先，你需要行动，这依赖于你究竟想要做的多好。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="Particularly if you&#x27;re starting a company, you need to work super hard.">Particularly if you&#x27;re starting a company, you need to work super hard.</p>
+    <p class="cn">你需要超级努力地工作，特别是对于创立公司的人。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="So what does super hard mean?">So what does super hard mean?</p>
+    <p class="cn">超级努力是什么意思呢？</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="Well, when my brother and I were starting up our first company，instead of getting an apartment, we just rented a small office.">Well, when my brother and I were starting up our first company，instead of getting an apartment, we just rented a small office.</p>
+    <p class="cn">我弟弟和我一起开创第一家公司的时候，我们租不起公寓，只租了一间小办公室。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="And we slept on the couch.">And we slept on the couch.</p>
+    <p class="cn">我们都睡在沙发上。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="And we showered at the YMCA">And we showered at the YMCA</p>
+    <p class="cn">我们在基督教青年会洗澡。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="We&#x27;re so hard up.">We&#x27;re so hard up.</p>
+    <p class="cn">我们很拮据。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="We had just one computer.">We had just one computer.</p>
+    <p class="cn">只买得起一台电脑。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="The website was up during the day, and I was coding at night, seven days a week, all the time.">The website was up during the day, and I was coding at night, seven days a week, all the time.</p>
+    <p class="cn">网站在白天运行，而我在晚上写代码，一周七天没有间歇。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="And I briefly had a girlfriend at that period.">And I briefly had a girlfriend at that period.</p>
+    <p class="cn">这期间我短暂交过一位女友.</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="And in order to be with me, she had to sleep in the office.">And in order to be with me, she had to sleep in the office.</p>
+    <p class="cn">为了和我一起，她不得不也睡办公室。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="So I work hard like at every waking hour.">So I work hard like at every waking hour.</p>
+    <p class="cn">我工作努力到醒着的时间都用于工作。</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="That&#x27;s the thing I would say particularly if you are starting a company.">That&#x27;s the thing I would say particularly if you are starting a company.</p>
+    <p class="cn">特别是对于要开公司的人，这就是我的建议。</p>
+  </div>
+</li><li class="line" data-i="14">
+  <span class="line-no">14</span>
+  <div class="line-body">
+    <p class="en" data-en="And if you do simple math, say like, if somebody else is working 50 hours, and you&#x27;re working 100，you&#x27;ll get twice as much done in the course of a year as the other company.">And if you do simple math, say like, if somebody else is working 50 hours, and you&#x27;re working 100，you&#x27;ll get twice as much done in the course of a year as the other company.</p>
+    <p class="cn">你可以简单算算，如果别人工作50小时，而你工作100小时，你公司在一年之内的作为肯定会比别人公司强一倍。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-18" data-id="18" style="--f:#FAEEDA;--m:#FAC775;--s:#BA7517;--d:#854F0B;--ink:#412402">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Think different 主题插画">
+        <title>Think different</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="180" y="46" width="130" height="130" rx="6" fill="#FAC775"/>
+<circle cx="245" cy="111" r="46" fill="#FAEEDA" stroke="#BA7517" stroke-width="3"/>
+<rect x="350" y="46" width="130" height="130" rx="6" fill="#BA7517"/>
+<circle cx="415" cy="111" r="46" fill="#854F0B"/>
+<path d="M245 160 L245 190 M415 160 L415 190" stroke="#412402" stroke-width="4" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">18 / 23</span>
+      <h2 class="sec-en">Think different</h2>
+      <p class="sec-cn">非同凡响</p>
+      <div class="sec-stats">
+        <span>14 句</span><span class="dot"></span><span>101 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="Here’s to the crazy ones.">Here’s to the crazy ones.</p>
+    <p class="cn">向那些疯狂的家伙致敬。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="The misfits.">The misfits.</p>
+    <p class="cn">他们我行我素，</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="The rebels.">The rebels.</p>
+    <p class="cn">桀骜不驯，</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="The troublemakers.">The troublemakers.</p>
+    <p class="cn">惹是生非，</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="The round pegs in the square holes.">The round pegs in the square holes.</p>
+    <p class="cn">就像方孔中的圆桩，</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="The ones who see things differently.">The ones who see things differently.</p>
+    <p class="cn">他们用不同的角度来看待事物，</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="They’re not fond of rules.">They’re not fond of rules.</p>
+    <p class="cn">他们既不墨守成规，</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="And they have no respect for the status quo.">And they have no respect for the status quo.</p>
+    <p class="cn">也不安于现状，</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="You can quote them, disagree with them, glorify or vilify them.">You can quote them, disagree with them, glorify or vilify them.</p>
+    <p class="cn">你尽可以引用他们，否定他们，质疑他们，颂扬抑或是诋毁他们，</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="About the only thing you can’t do is ignore them.">About the only thing you can’t do is ignore them.</p>
+    <p class="cn">但唯独不能漠视他们</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="Because they change things.">Because they change things.</p>
+    <p class="cn">因为他们改变了事物</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="They push the human race forward.">They push the human race forward.</p>
+    <p class="cn">他们让人类向前跨越了一大步</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="And while some may see them as the crazy ones, we see genius.">And while some may see them as the crazy ones, we see genius.</p>
+    <p class="cn">他们是别人眼里的疯子,却是我们眼中的天才</p>
+  </div>
+</li><li class="line" data-i="14">
+  <span class="line-no">14</span>
+  <div class="line-body">
+    <p class="en" data-en="Because the people who are crazy enough to think they can change the world, are the ones who do.">Because the people who are crazy enough to think they can change the world, are the ones who do.</p>
+    <p class="cn">因为,只有疯狂到认为,自己能够改变世界的人,才能真正的改变世界.</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-19" data-id="19" style="--f:#FAECE7;--m:#F5C4B3;--s:#D85A30;--d:#993C1D;--ink:#4A1B0C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="I always knew I was going to be rich 主题插画">
+        <title>I always knew I was going to be rich</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <rect x="140" y="150" width="46" height="44" rx="4" fill="#F5C4B3"/>
+<rect x="204" y="118" width="46" height="76" rx="4" fill="#F5C4B3"/>
+<rect x="268" y="82" width="46" height="112" rx="4" fill="#D85A30"/>
+<rect x="332" y="46" width="46" height="148" rx="4" fill="#D85A30"/>
+<rect x="396" y="24" width="46" height="170" rx="4" fill="#993C1D"/>
+<path d="M163 138 Q230 108 291 70 T419 14" stroke="#4A1B0C" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">19 / 23</span>
+      <h2 class="sec-en">I always knew I was going to be rich</h2>
+      <p class="sec-cn">我一直知道我会富有</p>
+      <div class="sec-stats">
+        <span>9 句</span><span class="dot"></span><span>144 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="I always knew I was going to be rich.">I always knew I was going to be rich.</p>
+    <p class="cn">我一直知道我会富有。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I don’t think I ever doubted it for a minute.">I don’t think I ever doubted it for a minute.</p>
+    <p class="cn">我一分钟都没怀疑过。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="Einstein is reputed to have said that “compound interest is the eighth wonder of the world”. Or something like that.">Einstein is reputed to have said that “compound interest is the eighth wonder of the world”. Or something like that.</p>
+    <p class="cn">据说爱因斯坦曾说过，“复利是世界的第八大奇迹”，或者类似的话。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="And it goes back to that story, you probably learned when you were in grade school.">And it goes back to that story, you probably learned when you were in grade school.</p>
+    <p class="cn">这总会追溯到那个故事，你可能在学校里听说过的故事。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="Where somebody did something for the king.">Where somebody did something for the king.</p>
+    <p class="cn">有人为国王做了一些事情，</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="And the king said, “what can i do for you ?">And the king said, “what can i do for you ?</p>
+    <p class="cn">国王说，我能为你做什么。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="And he said, “Well, lets take a chessboard, and put one kernel of wheat on the first square, and then double it on the second, and double it on the third.”">And he said, “Well, lets take a chessboard, and put one kernel of wheat on the first square, and then double it on the second, and double it on the third.”</p>
+    <p class="cn">他说，“拿个棋盘，第一个格子里放一颗谷粒，第二个格子放两颗，第三个格子里再翻倍。”</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="And the king readily agreed to it, and by the time he figured out what two to the 64th amounted to, he was giving away the entire kingdom.">And the king readily agreed to it, and by the time he figured out what two to the 64th amounted to, he was giving away the entire kingdom.</p>
+    <p class="cn">那国王立即同意了，而当他算出从第2个格子到第64个格子里总共是多少时，他就已经把整个王国的粮食给出去了。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="So it’s a pretty simple concept, but over time, it accomplishes extraordinary things.">So it’s a pretty simple concept, but over time, it accomplishes extraordinary things.</p>
+    <p class="cn">这是一个很简单的概念，但是随着时间的推移，就会有非凡的结果。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-20" data-id="20" style="--f:#EEEDFE;--m:#CECBF6;--s:#7F77DD;--d:#534AB7;--ink:#26215C">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Compound interest 主题插画">
+        <title>Compound interest</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <g>
+<rect x="200" y="26" width="34" height="34" fill="#CECBF6"/><rect x="302" y="26" width="34" height="34" fill="#534AB7"/>
+<rect x="234" y="60" width="34" height="34" fill="#7F77DD"/><rect x="268" y="60" width="34" height="34" fill="#CECBF6"/><rect x="336" y="60" width="34" height="34" fill="#7F77DD"/>
+<rect x="200" y="94" width="34" height="34" fill="#534AB7"/><rect x="268" y="94" width="34" height="34" fill="#534AB7"/><rect x="336" y="94" width="34" height="34" fill="#CECBF6"/>
+<rect x="234" y="128" width="34" height="34" fill="#CECBF6"/><rect x="302" y="128" width="34" height="34" fill="#7F77DD"/><rect x="370" y="128" width="34" height="34" fill="#534AB7"/>
+<rect x="200" y="162" width="34" height="34" fill="#7F77DD"/><rect x="268" y="162" width="34" height="34" fill="#CECBF6"/><rect x="336" y="162" width="34" height="34" fill="#534AB7"/>
+</g>
+<circle cx="268" cy="60" r="5" fill="#26215C"/><circle cx="336" cy="94" r="5" fill="#26215C"/><circle cx="370" cy="162" r="5" fill="#26215C"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">20 / 23</span>
+      <h2 class="sec-en">Compound interest</h2>
+      <p class="sec-cn">复利法则</p>
+      <div class="sec-stats">
+        <span>18 句</span><span class="dot"></span><span>257 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="And very early, probably when I was seven or so, I took this book out of the Bensen Library, called “A thousand ways to make a $ 1,000.”">And very early, probably when I was seven or so, I took this book out of the Bensen Library, called “A thousand ways to make a $ 1,000.”</p>
+    <p class="cn">很早的时候，大概7岁时，我从本森图书馆借出一本书，《赚一千美元的一千种方法》。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="And one of the ways in this book was having penny weighing machines.">And one of the ways in this book was having penny weighing machines.</p>
+    <p class="cn">书中的方法之一，就是拥有一台投币体重计。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="I sat and calculated how much it would cost to buy the first weighing machine, and then how long it would take for the profit from that one to buy another one.">I sat and calculated how much it would cost to buy the first weighing machine, and then how long it would take for the profit from that one to buy another one.</p>
+    <p class="cn">我坐下算了算我要花多少钱去购买第一台体重计, 第一台体重计赚得的利润能购买另外一台需要花多长时间。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="And I would sit there and create these compound interest tables to figure out how long it would take me to have a weighing machine for every person in the world.">And I would sit there and create these compound interest tables to figure out how long it would take me to have a weighing machine for every person in the world.</p>
+    <p class="cn">我会坐在那里做复利表,去计算让世界上每个人都拥有一台体重秤需要多长时间。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="I had everybody in the country weighing themselves ten times a day, and me just sitting there like John D.Rockefeller of weighing machines.">I had everybody in the country weighing themselves ten times a day, and me just sitting there like John D.Rockefeller of weighing machines.</p>
+    <p class="cn">我要让所有美国人每天称十次体重，我只要坐在那里，像体重计行业的洛克菲勒。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="That allowance when I was a little boy was a nickel a week,">That allowance when I was a little boy was a nickel a week,</p>
+    <p class="cn">我小时候每个星期的零花钱是一个星期五美分，</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="But I liked the idea of having a little more than a nickel a week to work with.">But I liked the idea of having a little more than a nickel a week to work with.</p>
+    <p class="cn">但我想让我一个星期的零花钱不止五美分，</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="And I went into business very early.">And I went into business very early.</p>
+    <p class="cn">我很早就进入商业领域了。</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="I started sell Coca-Cola door to door.">I started sell Coca-Cola door to door.</p>
+    <p class="cn">我挨家挨户卖可口可乐。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="I sold gum door to door.">I sold gum door to door.</p>
+    <p class="cn">我挨家挨户卖口香糖。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="I sold “Saturday Evening Post”, “Liberty” Magazine, “Ladies Home Journal”, you name it.">I sold “Saturday Evening Post”, “Liberty” Magazine, “Ladies Home Journal”, you name it.</p>
+    <p class="cn">我卖《星期六晚报》，卖《自由杂志》，《妇女家庭杂志》，凡是你想到的。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="I think I enjoyed the game almost right from the start.">I think I enjoyed the game almost right from the start.</p>
+    <p class="cn">我觉得我从一开始就很喜欢这项游戏。</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="But I like being my own boss.">But I like being my own boss.</p>
+    <p class="cn">但我喜欢做我自己的老板。</p>
+  </div>
+</li><li class="line" data-i="14">
+  <span class="line-no">14</span>
+  <div class="line-body">
+    <p class="en" data-en="That’s one thing I liked about delivering papers.">That’s one thing I liked about delivering papers.</p>
+    <p class="cn">这是我喜欢投递报纸的原因之一。</p>
+  </div>
+</li><li class="line" data-i="15">
+  <span class="line-no">15</span>
+  <div class="line-body">
+    <p class="en" data-en="I could arrange the route I wanted.">I could arrange the route I wanted.</p>
+    <p class="cn">我可以安排我喜欢的路线。</p>
+  </div>
+</li><li class="line" data-i="16">
+  <span class="line-no">16</span>
+  <div class="line-body">
+    <p class="en" data-en="Nobody was bothering me at 5.00 or 6.00 in the morning.">Nobody was bothering me at 5.00 or 6.00 in the morning.</p>
+    <p class="cn">在早上五六点钟没人打扰我。</p>
+  </div>
+</li><li class="line" data-i="17">
+  <span class="line-no">17</span>
+  <div class="line-body">
+    <p class="en" data-en="I was delivering 500 papers a day.">I was delivering 500 papers a day.</p>
+    <p class="cn">我一天投递500份报纸。</p>
+  </div>
+</li><li class="line" data-i="18">
+  <span class="line-no">18</span>
+  <div class="line-body">
+    <p class="en" data-en="And I made a penny a paper, but in terms of compounding, that penny has turned into something else.">And I made a penny a paper, but in terms of compounding, that penny has turned into something else.</p>
+    <p class="cn">一份报纸赚一便士，但是通过复利法则，那一便士便换成了其他东西。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-21" data-id="21" style="--f:#E6F1FB;--m:#B5D4F4;--s:#378ADD;--d:#185FA5;--ink:#042C53">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Method of learning 主题插画">
+        <title>Method of learning</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M200 168 L200 60 Q250 44 300 60 L300 168 Q250 152 200 168 Z" fill="#B5D4F4"/>
+<path d="M300 168 L300 60 Q350 44 400 60 L400 168 Q350 152 300 168 Z" fill="#E6F1FB" stroke="#B5D4F4" stroke-width="2"/>
+<path d="M300 60 L300 168" stroke="#185FA5" stroke-width="3" fill="none"/>
+<circle cx="470" cy="70" r="34" fill="#378ADD"/>
+<rect x="458" y="100" width="24" height="20" rx="4" fill="#185FA5"/>
+<path d="M470 46 L470 94 M446 70 L494 70" stroke="#E6F1FB" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">21 / 23</span>
+      <h2 class="sec-en">Method of learning</h2>
+      <p class="sec-cn">只有学习了学习的方法才能进步</p>
+      <div class="sec-stats">
+        <span>8 句</span><span class="dot"></span><span>187 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="Alfred North Whitehead said it one time that “the rapid advance of civilization came only when man invented the method of invention”.">Alfred North Whitehead said it one time that “the rapid advance of civilization came only when man invented the method of invention”.</p>
+    <p class="cn">阿尔弗雷德·诺斯·怀特海曾经说过一句很正确的话，他说只有当人类“发明了发明的方法”之后，人类社会才能快速地发展。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="And of course he was referring to the huge growth of GDP per capita and all the other good things that we now take for granted which started a few hundred years ago and before that all was stasis.">And of course he was referring to the huge growth of GDP per capita and all the other good things that we now take for granted which started a few hundred years ago and before that all was stasis.</p>
+    <p class="cn">他指的是人均GDP的巨大增长和其他许多我们今天已经习以为常的好东西。人类社会在几百年前才出现了大发展，在那之前，每个世纪的发展几乎等于零。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="So if civilization can progress only when it invents the method of invention, you can progress only when you learn the method of learning.">So if civilization can progress only when it invents the method of invention, you can progress only when you learn the method of learning.</p>
+    <p class="cn">人类社会只有发明了发明的方法之后才能发展，同样的道理，你们只有学习了学习的方法之后才能进步。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="I was very lucky.">I was very lucky.</p>
+    <p class="cn">我非常幸运。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="I came to law school having learned the method of learning and nothing has served me better in my long life than continuous learning.">I came to law school having learned the method of learning and nothing has served me better in my long life than continuous learning.</p>
+    <p class="cn">我读法学院之前就已经学会了学习的方法。在我这漫长的一生中，没有什么比持续学习对我的帮助更大。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="And if you take Warren Buffett and watched him with a time clock, I would say half of all the time he spends is sitting on his ass and reading.">And if you take Warren Buffett and watched him with a time clock, I would say half of all the time he spends is sitting on his ass and reading.</p>
+    <p class="cn">再拿沃伦·巴菲特来说，如果你们拿着计时器观察他，会发现他醒着的时候有一半时间是在看书。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="And a big chunk of the rest of the time is spent talking one on one, either on the telephone or personally, with highly gifted people whom he trusts and who trust him.">And a big chunk of the rest of the time is spent talking one on one, either on the telephone or personally, with highly gifted people whom he trusts and who trust him.</p>
+    <p class="cn">他把剩下的时间大部分用来跟一些非常有才干的人进行一对一的交谈，有时候是打电话，有时候是当面，那些都是他信任且信任他的人。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="In other words, it looks quite academic, all this worldly success.">In other words, it looks quite academic, all this worldly success.</p>
+    <p class="cn">换句话说，沃伦在世俗生活中的巨大成功，是通过很学术的方法获得的。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-22" data-id="22" style="--f:#EAF3DE;--m:#C0DD97;--s:#639922;--d:#3B6D11;--ink:#173404">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Change mindset change brain 主题插画">
+        <title>Change mindset change brain</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <path d="M360 40 Q300 40 288 78 Q246 82 252 122 Q244 162 292 172 Q312 196 360 190 Q408 196 428 172 Q476 162 468 122 Q474 82 432 78 Q420 40 360 40 Z" fill="#C0DD97" stroke="#639922" stroke-width="2"/>
+<circle cx="330" cy="102" r="9" fill="#3B6D11"/><circle cx="392" cy="102" r="9" fill="#3B6D11"/><circle cx="360" cy="146" r="9" fill="#639922"/>
+<path d="M330 102 L392 102 M330 102 L360 146 M392 102 L360 146" stroke="#EAF3DE" stroke-width="3" fill="none"/>
+<circle cx="360" cy="102" r="6" fill="#639922"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">22 / 23</span>
+      <h2 class="sec-en">Change mindset change brain</h2>
+      <p class="sec-cn">改变思维模式，改变大脑</p>
+      <div class="sec-stats">
+        <span>5 句</span><span class="dot"></span><span>102 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="And we can actually change students&#x27; mindsets.">And we can actually change students&#x27; mindsets.</p>
+    <p class="cn">事实上，我们能够改变学生的思维模式。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="In one study, we taught them that every time they push out of their comfort zone to learn something new and difficult, the neurons in their brain can form new, stronger connections, and over time they can get smarter.">In one study, we taught them that every time they push out of their comfort zone to learn something new and difficult, the neurons in their brain can form new, stronger connections, and over time they can get smarter.</p>
+    <p class="cn">在一项研究中，我们告诉学生们，每当他们迫使自己走出舒适区，学习新知识，迎接新挑战，大脑中的神经元会形成新的更强的连接，他们会逐渐变得越来越聪明。</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="Look what happened.">Look what happened.</p>
+    <p class="cn">看看后面发生了什么吧。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="In this study, students who were not taught this growth mindset continued to show declining grades over this difficult school transition, but those who were taught this lesson showed a sharp rebound in their grades.">In this study, students who were not taught this growth mindset continued to show declining grades over this difficult school transition, but those who were taught this lesson showed a sharp rebound in their grades.</p>
+    <p class="cn">在这项研究中，没有接受成长型思维模式训练的学生，在这一困难的过渡阶段，成绩持续下滑，但那些受过该训练的学生，成绩强势反弹，卓有起色。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="We have shown this now, this kind of improvement, with thousands and thousands of kids, especially struggling students.">We have shown this now, this kind of improvement, with thousands and thousands of kids, especially struggling students.</p>
+    <p class="cn">如今，我们已证实这一结论，通过成千上万个孩子的实例，尤其是那些在学业上挣扎的孩子。</p>
+  </div>
+</li></ol>
+</section>
+<section class="sec" id="sec-23" data-id="23" style="--f:#FBEAF0;--m:#F4C0D1;--s:#D4537E;--d:#993556;--ink:#4B1528">
+  <header class="sec-head">
+    <div class="sec-art">
+      <svg viewBox="0 0 680 210" width="100%" role="img" aria-label="Grit is the key to success 主题插画">
+        <title>Grit is the key to success</title>
+        <desc>与本篇主题相关的图形插画</desc>
+        <ellipse cx="360" cy="110" rx="200" ry="72" fill="none" stroke="#F4C0D1" stroke-width="4"/>
+<ellipse cx="360" cy="110" rx="132" ry="44" fill="none" stroke="#D4537E" stroke-width="4"/>
+<circle cx="360" cy="110" r="18" fill="#993556"/>
+<circle cx="160" cy="110" r="14" fill="#D4537E"/>
+<circle cx="560" cy="110" r="14" fill="#F4C0D1"/>
+<path d="M360 66 L360 38 M360 154 L360 182" stroke="#4B1528" stroke-width="3" fill="none"/>
+<path d="M310 38 L410 38 M310 182 L410 182" stroke="#F4C0D1" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-titles">
+      <span class="sec-no">23 / 23</span>
+      <h2 class="sec-en">Grit is the key to success</h2>
+      <p class="sec-cn">毅力是成功的关键</p>
+      <div class="sec-stats">
+        <span>16 句</span><span class="dot"></span><span>244 词</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button class="tbtn" data-act="toggle-cn">隐藏中文</button>
+    <button class="tbtn" data-act="toggle-en">隐藏英文</button>
+    <button class="tbtn" data-act="blank">挖空模式</button>
+    <button class="tbtn" data-act="read">朗读全篇</button>
+  </div>
+
+  <ol class="lines"><li class="line" data-i="1">
+  <span class="line-no">01</span>
+  <div class="line-body">
+    <p class="en" data-en="So I left the classroom, and I went to graduate school to become a psychologist.">So I left the classroom, and I went to graduate school to become a psychologist.</p>
+    <p class="cn">所以我离开了讲台，回到研究院成为一名心理学家。</p>
+  </div>
+</li><li class="line" data-i="2">
+  <span class="line-no">02</span>
+  <div class="line-body">
+    <p class="en" data-en="I started studying kids and adults in all kinds of super challenging settings, and in every study my question was, who is successful here and why?">I started studying kids and adults in all kinds of super challenging settings, and in every study my question was, who is successful here and why?</p>
+    <p class="cn">我开始研究在各种非常具有挑战性的情况下的孩子和大人，在各项研究中，我的问题是：谁才是成功者，为什么他们会成功？</p>
+  </div>
+</li><li class="line" data-i="3">
+  <span class="line-no">03</span>
+  <div class="line-body">
+    <p class="en" data-en="My research team and I went to West Point Military Academy.">My research team and I went to West Point Military Academy.</p>
+    <p class="cn">我和我的研究团队前往西点军校展开调研。</p>
+  </div>
+</li><li class="line" data-i="4">
+  <span class="line-no">04</span>
+  <div class="line-body">
+    <p class="en" data-en="We tried to predict which cadets would stay in military training and which would drop out.">We tried to predict which cadets would stay in military training and which would drop out.</p>
+    <p class="cn">我们试图预测哪些学员能够耐得住军队的训练，哪些会被淘汰出局。</p>
+  </div>
+</li><li class="line" data-i="5">
+  <span class="line-no">05</span>
+  <div class="line-body">
+    <p class="en" data-en="We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.">We went to the National Spelling Bee and tried to predict which children would advance farthest in competition.</p>
+    <p class="cn">我们前去观摩全国拼字比赛，同时也试着预测哪些孩子会晋级到最后的比赛。</p>
+  </div>
+</li><li class="line" data-i="6">
+  <span class="line-no">06</span>
+  <div class="line-body">
+    <p class="en" data-en="We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year, and of those, who will be the most effective at improving learning outcomes for their students?">We studied rookie teachers working in really tough neighborhoods, asking which teachers are still going to be here in teaching by the end of the school year, and of those, who will be the most effective at improving learning outcomes for their students?</p>
+    <p class="cn">我们研究在恶劣的工作环境下工作的，刚入行的老师，询问他们哪些老师决定会在学年结束后继续留下来任教，以及他们之中谁能最快地提高学生的学习成绩。</p>
+  </div>
+</li><li class="line" data-i="7">
+  <span class="line-no">07</span>
+  <div class="line-body">
+    <p class="en" data-en="We partnered with private companies, asking, which of these salespeople is going to keep their jobs?">We partnered with private companies, asking, which of these salespeople is going to keep their jobs?</p>
+    <p class="cn">我们与私企合作，向他们询问哪些销售人员可以保住工作。</p>
+  </div>
+</li><li class="line" data-i="8">
+  <span class="line-no">08</span>
+  <div class="line-body">
+    <p class="en" data-en="And who&#x27;s going to earn the most money?">And who&#x27;s going to earn the most money?</p>
+    <p class="cn">哪些人可以赚钱最多？</p>
+  </div>
+</li><li class="line" data-i="9">
+  <span class="line-no">09</span>
+  <div class="line-body">
+    <p class="en" data-en="In all those very different contexts, one characteristic emerged as a significant predictor of success.">In all those very different contexts, one characteristic emerged as a significant predictor of success.</p>
+    <p class="cn">在所有那些不同的情境下，一种性格特征凸显了出来，这种特征在很大程度上预示了成功。</p>
+  </div>
+</li><li class="line" data-i="10">
+  <span class="line-no">10</span>
+  <div class="line-body">
+    <p class="en" data-en="And it wasn&#x27;t social intelligence.">And it wasn&#x27;t social intelligence.</p>
+    <p class="cn">而且它并不是社交智力。</p>
+  </div>
+</li><li class="line" data-i="11">
+  <span class="line-no">11</span>
+  <div class="line-body">
+    <p class="en" data-en="It wasn&#x27;t good looks, physical health, and it wasn&#x27;t I.Q.">It wasn&#x27;t good looks, physical health, and it wasn&#x27;t I.Q.</p>
+    <p class="cn">不是漂亮的外表，强健的体魄，也不是很高的IQ。</p>
+  </div>
+</li><li class="line" data-i="12">
+  <span class="line-no">12</span>
+  <div class="line-body">
+    <p class="en" data-en="It was grit.">It was grit.</p>
+    <p class="cn">它是毅力。</p>
+  </div>
+</li><li class="line" data-i="13">
+  <span class="line-no">13</span>
+  <div class="line-body">
+    <p class="en" data-en="Grit is passion and perseverance for very long-term goals.">Grit is passion and perseverance for very long-term goals.</p>
+    <p class="cn">毅力是对长远目标的激情和坚持。</p>
+  </div>
+</li><li class="line" data-i="14">
+  <span class="line-no">14</span>
+  <div class="line-body">
+    <p class="en" data-en="Grit is having stamina.">Grit is having stamina.</p>
+    <p class="cn">毅力是拥有持久的恒劲。</p>
+  </div>
+</li><li class="line" data-i="15">
+  <span class="line-no">15</span>
+  <div class="line-body">
+    <p class="en" data-en="Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.">Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality.</p>
+    <p class="cn">毅力是你对未来的坚持，日复一日，而不仅仅是持续一个星期或者一个月，而是几年甚至几十年努力奋斗着让自己的梦想变为现实。</p>
+  </div>
+</li><li class="line" data-i="16">
+  <span class="line-no">16</span>
+  <div class="line-body">
+    <p class="en" data-en="Grit is living life like it&#x27;s a marathon, not a sprint.">Grit is living life like it&#x27;s a marathon, not a sprint.</p>
+    <p class="cn">毅力是把生活当成一场马拉松而不是一次短跑。</p>
+  </div>
+</li></ol>
+</section>
+
+  <div class="backtop"><button id="up" title="回到顶部">↑</button></div>
+</div>
+
+<p class="foot">内容来源：《核聚英语 23 篇》 · 本页为本地离线版本</p>
+
+<script>
+const SECS = document.querySelectorAll('.sec');
+const CARDS = document.querySelectorAll('.card');
+
+document.querySelectorAll('.sec').forEach(function(s){
+  s.querySelectorAll('.line .en').forEach(function(en){
+    const raw = en.dataset.en || en.textContent;
+    const spans = raw.split(/(\s+)/).map(function(tok){
+      if (!tok.trim()) return tok;
+      const w = tok.replace(/^[^A-Za-z]+|[^A-Za-z]+$/g,'');
+      if (w.length >= 4) {
+        return '<span class="bl" data-w="'+w.toLowerCase()+'">'+tok+'</span>';
+      }
+      return tok;
+    });
+    en.innerHTML = spans.join('');
+  });
+});
+
+function totalStat(){
+  let sent = 0, word = 0;
+  document.querySelectorAll('.sec').forEach(function(s){
+    sent += s.querySelectorAll('.line').length;
+    word += parseInt(s.querySelector('.sec-stats span:last-child').textContent, 10) || 0;
+  });
+  document.getElementById('mSent').textContent = sent;
+  document.getElementById('mWord').textContent = word;
+}
+totalStat();
+
+function toast(msg){
+  var t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;left:50%;bottom:34px;transform:translateX(-50%);z-index:200;'
+   + 'background:var(--text);color:var(--bg);padding:9px 18px;border-radius:999px;font-size:13px;'
+   + 'box-shadow:0 6px 20px rgba(0,0,0,.18);pointer-events:none;transition:opacity .25s';
+  document.body.appendChild(t);
+  setTimeout(function(){ t.style.opacity = '0'; }, 1100);
+  setTimeout(function(){ t.remove(); }, 1400);
+}
+
+/* ---- 卡片跳转 ---- */
+CARDS.forEach(function(c){
+  c.addEventListener('click', function(){
+    const t = document.getElementById('sec-' + c.dataset.id);
+    if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+/* ---- 全局开关 ---- */
+let cnHidden = false, blankOn = false;
+const btnCn = document.getElementById('btnCn');
+const btnBlank = document.getElementById('btnBlank');
+const btnTheme = document.getElementById('btnTheme');
+
+btnCn.addEventListener('click', function(){
+  cnHidden = !cnHidden;
+  SECS.forEach(function(s){ s.classList.toggle('hide-cn', cnHidden); });
+  btnCn.classList.toggle('on', cnHidden);
+  btnCn.textContent = cnHidden ? '显示中文' : '中文';
+  toast(cnHidden ? '已隐藏全部中文' : '已显示全部中文');
+});
+
+btnBlank.addEventListener('click', function(){
+  blankOn = !blankOn;
+  SECS.forEach(function(s){ s.classList.toggle('blank', blankOn); });
+  btnBlank.classList.toggle('on', blankOn);
+  btnBlank.textContent = blankOn ? '退出挖空' : '挖空';
+  toast(blankOn ? '挖空模式：点击色块显示' : '已退出挖空模式');
+});
+
+btnTheme.addEventListener('click', function(){
+  const now = document.documentElement.dataset.theme;
+  const next = now === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  btnTheme.textContent = next === 'dark' ? '日间' : '夜间';
+  btnTheme.classList.toggle('on', next === 'dark');
+  try { localStorage.setItem('kl-theme', next); } catch(e){}
+});
+try {
+  const saved = localStorage.getItem('kl-theme');
+  if (saved) {
+    document.documentElement.dataset.theme = saved;
+    btnTheme.textContent = saved === 'dark' ? '日间' : '夜间';
+    btnTheme.classList.toggle('on', saved === 'dark');
+  }
+} catch(e){}
+
+/* ---- 单篇工具条 ---- */
+document.querySelectorAll('.tbtn').forEach(function(b){
+  b.addEventListener('click', function(){
+    const sec = b.closest('.sec');
+    const act = b.dataset.act;
+
+    if (act === 'toggle-cn'){
+      const on = sec.classList.toggle('hide-cn');
+      b.classList.toggle('on', on);
+      b.textContent = on ? '显示中文' : '隐藏中文';
+    }
+    if (act === 'toggle-en'){
+      const on = sec.classList.toggle('hide-en');
+      b.classList.toggle('on', on);
+      b.textContent = on ? '显示英文' : '隐藏英文';
+    }
+    if (act === 'blank'){
+      const on = sec.classList.toggle('blank');
+      b.classList.toggle('on', on);
+      b.textContent = on ? '退出挖空' : '挖空模式';
+      if (on) toast('点击色块可显示该单词');
+    }
+    if (act === 'read'){
+      speakSection(sec, b);
+    }
+  });
+});
+
+/* ---- 挖空：点击显示 ---- */
+document.addEventListener('click', function(e){
+  const bl = e.target.closest('.bl');
+  if (bl) bl.classList.toggle('shown');
+});
+
+/* ---- 朗读 ---- */
+let speakingSec = null;
+function speakSection(sec, btn){
+  if (!('speechSynthesis' in window)) { toast('当前浏览器不支持朗读'); return; }
+  if (speakingSec === sec){
+    speechSynthesis.cancel();
+    clearSpeaking();
+    return;
+  }
+  speechSynthesis.cancel();
+  clearSpeaking();
+  speakingSec = sec;
+
+  const lines = Array.from(sec.querySelectorAll('.line'));
+  const texts = lines.map(function(l){ return l.querySelector('.en').dataset.en; });
+
+  let i = 0;
+  function run(){
+    if (i >= texts.length){ clearSpeaking(); toast('朗读完成'); return; }
+    const li = lines[i];
+    const cur = i;
+    li.classList.add('speaking');
+    li.scrollIntoView({behavior:'smooth', block:'center'});
+    const u = new SpeechSynthesisUtterance(texts[cur]);
+    u.lang = 'en-US'; u.rate = 0.88;
+    u.onend = function(){ li.classList.remove('speaking'); i = cur + 1; run(); };
+    u.onerror = function(){ li.classList.remove('speaking'); i = cur + 1; run(); };
+    speechSynthesis.speak(u);
+  }
+  btn.classList.add('on'); btn.textContent = '停止朗读';
+  run();
+}
+function clearSpeaking(){
+  document.querySelectorAll('.line.speaking').forEach(function(l){ l.classList.remove('speaking'); });
+  document.querySelectorAll('.tbtn[data-act="read"]').forEach(function(b){
+    b.classList.remove('on'); b.textContent = '朗读全篇';
+  });
+  speakingSec = null;
+}
+
+/* ---- 搜索过滤 ---- */
+const q = document.getElementById('q');
+q.addEventListener('input', function(){
+  const kw = q.value.trim().toLowerCase();
+  CARDS.forEach(function(c){
+    const sec = document.getElementById('sec-' + c.dataset.id);
+    const hay = (c.textContent + ' ' + (sec ? sec.textContent : '')).toLowerCase();
+    c.style.display = (!kw || hay.indexOf(kw) !== -1) ? '' : 'none';
+  });
+});
+
+/* ---- 阅读进度 ---- */
+const bar = document.getElementById('bar');
+function onScroll(){
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const y = window.scrollY || document.documentElement.scrollTop;
+  bar.style.width = (h > 0 ? Math.min(100, (y / h) * 100) : 0) + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+document.getElementById('up').addEventListener('click', function(){
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+/* ---- 键盘快捷键 ---- */
+document.addEventListener('keydown', function(e){
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'c' || e.key === 'C') btnCn.click();
+  if (e.key === 'b' || e.key === 'B') btnBlank.click();
+  if (e.key === 'Escape'){ speechSynthesis && speechSynthesis.cancel(); clearSpeaking(); }
+});
+</script>
+</body>
+</html>
